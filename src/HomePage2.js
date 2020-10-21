@@ -7,7 +7,6 @@ import linkedin from './images/linkedin.png';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/button';
 import './homePage.css';
 import './shadowText.scss';
 
