@@ -22,10 +22,11 @@ const SpotifyLogin = () => {
       var state = generateRandomString(16);
 
       localStorage.setItem(stateKey, state);
-      var scope = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing streaming app-remote-control user-library-modify user-library-read user-read-playback-position user-read-recently-played';
+      var scope = 'user-read-private user-top-read user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing streaming app-remote-control user-library-modify user-library-read user-read-playback-position user-read-recently-played playlist-read-collaborative playlist-modify-private playlist-read-private playlist-modify-public';
 
       var url = 'https://accounts.spotify.com/authorize';
-      url += '?response_type=token';
+      // url += '?response_type=token';
+      url += '?response_type=code';
       url += '&client_id=' + encodeURIComponent(client_id);
       url += '&scope=' + encodeURIComponent(scope);
       url += '&redirect_uri=' + encodeURIComponent(redirect_uri);

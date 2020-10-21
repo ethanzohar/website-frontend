@@ -1,0 +1,20 @@
+body {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    background-image: red;
+}
+
+.mainHeader {
+    margin-right: 20px;
+    height: 19vh;
+}
+
+.headerImages {
+    margin: 10px 10px 0 30px;
+}
+
+.BaseApp {
+    /* background-image:linear-gradient(#ff8583, #ff5350); */
+    /* background-image:linear-gradient(white, #ff8583); */
+}

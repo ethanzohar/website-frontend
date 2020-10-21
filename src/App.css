@@ -10,6 +10,7 @@
 
 .BaseApp {
   background-color:#eaf2fd;
+  height: 100vh;
 }
 
 .App-header {

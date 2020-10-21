@@ -13,6 +13,7 @@ class SpotifyLoginRedirect extends Component {
 
   componentDidMount() {
     const params = getHashParams();
+    console.log(params);
 
     localStorage.setItem(paramsKey, JSON.stringify(params));
 
@@ -27,7 +28,37 @@ class SpotifyLoginRedirect extends Component {
       getUserInfo(params.access_token);
     }
 
-    window.location = url;
+    console.log("TOKEn")
+    console.log(params.access_token)
+    console.log(window.location.origin + '/spotify/login/redirect');
+
+    var details = {
+      'grant_type': 'authorization_code',
+      'code': params.access_token,
+      'redirect_uri':  window.location.origin + '/spotify/login/redirect'
+    }
+
+    var formBody = [];
+  for (var property in details) {
+    var encodedKey = encodeURIComponent(property);
+    var encodedValue = encodeURIComponent(details[property]);
+    formBody.push(encodedKey + "=" + encodedValue);
+  }
+  formBody = formBody.join("&");
+
+    fetch(`https://accounts.spotify.com/api/token`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Basic ' + btoa("53a649e024504a91898d19070924df56:14e30b2109754978a3791c232ad69428"),
+    },
+    body: formBody
+  }).then((r) => r.json())
+  .then((b) => {
+      console.log(b);
+  });
+
+    // window.location = url;
   }
 
   render() {

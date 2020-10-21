@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter } from "react-router-dom";
 import HomePage from "./HomePage";
+import HomePage2 from "./HomePage2";
 import Endpoints from "./Endpoints";
 import SpotifyLogin from "./SpotifyLogin";
 import Spotify from "./Spotify";
@@ -15,6 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <Route exact path="/" component={HomePage}></Route>
+      <Route exact path="/new" component={HomePage2}></Route>
       <Route exact path="/endpoints" component={Endpoints}></Route>
       <Route exact path="/spotify" component={Spotify}></Route>
       <Route exact path="/spotify/login" component={SpotifyLogin}></Route>
