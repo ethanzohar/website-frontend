@@ -28,7 +28,7 @@ class HomePage2 extends Component {
                 <div className="shadow" style={{padding: '0', margin: '0'}}>
                   <p>Ethan Zohar</p>
                 </div>
-                {/* <h1 style={{ maxWidth: 'max-content', margin: '0 auto', fontSize: '5rem', fontWeight: 'bold' }}>Ethan Zohar</h1> */}
+                <h1 style={{ maxWidth: 'max-content', margin: '0 auto', fontSize: '5rem', fontWeight: 'bold' }}>Ethan Zohar</h1>
               </Row>
               <Row>
                 <Col>
