@@ -10,6 +10,8 @@ import Col from 'react-bootstrap/Col';
 import './homePage.css';
 import './shadowText.scss';
 
+// sudo evn PATH=$PATH pm2 serve build 80 --name website --spa
+
 class HomePage2 extends Component {
   render() {
     return (
@@ -23,9 +25,10 @@ class HomePage2 extends Component {
                 <img src={headerImage3} style={{ marginLeft: '5%' }} alt="Ethan Zohar" width='30%'  />
               </Row>
               <Row>
-                <>
-                  <h1 style={{ maxWidth: 'max-content', margin: '0 auto', fontSize: '7rem' }}>Ethan Zohar</h1>
-                </>
+                <div className="shadow" style={{padding: '0', margin: '0'}}>
+                  <p>Ethan Zohar</p>
+                </div>
+                {/* <h1 style={{ maxWidth: 'max-content', margin: '0 auto', fontSize: '5rem', fontWeight: 'bold' }}>Ethan Zohar</h1> */}
               </Row>
               <Row>
                 <Col>

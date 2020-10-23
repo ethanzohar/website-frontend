@@ -55,9 +55,7 @@ $shadow: unquote($shadow);
     display: inline-block;
     float: left;
     margin-right: 2%;
-    transition: all .2s;
     width: max-content;
-    cursor: pointer;
 
     p {
         font-size: 8rem;
@@ -75,6 +73,11 @@ $shadow: unquote($shadow);
 
 .shadow:after {
     clear: both;
+}
+
+.shadowHover {
+    cursor: pointer;
+    transition: all .2s;
 }
 
 .shadowHover:hover {
