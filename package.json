@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -16,6 +15,7 @@
     "react-amazing-proxy": "^1.0.63",
     "react-bootstrap": "^1.3.0",
     "react-dom": "^16.12.0",
+    "react-pdf": "^5.0.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "request": "~2.83.0"
