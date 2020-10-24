@@ -58,7 +58,7 @@ class SpotifyLoginRedirect extends Component {
       console.log(b);
   });
 
-    // window.location = url;
+    window.location = url;
   }
 
   render() {

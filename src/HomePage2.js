@@ -1,4 +1,4 @@
-import React, { Component, useState  } from 'react';
+import React, { Component  } from 'react';
 import { pdfjs, Document, Page } from "react-pdf";
 import headerImage1 from './images/headerImage1.jpg';
 import headerImage2 from './images/headerImage2.jpg';
@@ -6,6 +6,11 @@ import headerImage3 from './images/headerImage3.jpg';
 import github from './images/github.svg';
 import linkedin from './images/linkedin.png';
 import instagram from './images/instagram.webp';
+import screenshareStream from './images/screenshareStream.png';
+import screenshareWatch from './images/screenshareWatch.png';
+import viberListen from './images/viberListenView.png';
+import viberStream from './images/viberStreamView.png';
+import whiteboards from './images/whiteboards.png';
 import transcript from './pdfs/transcript.pdf';
 import resume from './pdfs/resume.pdf';
 import Row from 'react-bootstrap/Row';
@@ -183,7 +188,7 @@ class HomePage2 extends Component {
                     </Col>
                   </Row>
                   <Row style={{ margin: '0' }}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about my experience.</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining</p>
                   </Row>
                 </Row>
                 <Row style={{ margin: '2% 0 0 1%' }}>
@@ -199,7 +204,7 @@ class HomePage2 extends Component {
                     </Col>
                   </Row>
                   <Row style={{ margin: '0' }}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about my experience.</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining</p>
                   </Row>
                 </Row>
                 <Row style={{ margin: '2% 0 0 1%' }}>
@@ -215,7 +220,7 @@ class HomePage2 extends Component {
                     </Col>
                   </Row>
                   <Row style={{ margin: '0' }}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about my experience.</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining</p>
                   </Row>
                 </Row>
                 <Row style={{ margin: '2% 0 0 1%' }}>
@@ -231,7 +236,7 @@ class HomePage2 extends Component {
                     </Col>
                   </Row>
                   <Row style={{ margin: '0' }}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about my experience.</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining</p>
                   </Row>
                 </Row>
               </Col>
@@ -242,40 +247,63 @@ class HomePage2 extends Component {
               </Col>
             </Row>
             <Row id="PerProj" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ffeded'}}>
-              <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
-                <Document
-                  file={this.state.file}
-                  onLoadSuccess={this.onDocumentLoadSuccess}
-                  className="leftDoc"
-                >
-                  <Page pageNumber={this.state.pageNumber} />
-                <div className="page-controls">
-                  <button
-                    type="button"
-                    disabled={this.state.pageNumber <= 1}
-                    onClick={this.previousPage}
-                  >
-                    {'<'}
-                  </button>
-                  <span>{`${this.state.pageNumber} of ${this.state.numPages}`}</span>
-                  <button
-                    type="button"
-                    disabled={this.state.pageNumber >= this.state.numPages}
-                    onClick={this.nextPage}
-                  >
-                  {'>'}
-                  </button>
-                </div>
-                </Document>
-              </Col>
-              <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right'}}>
-                <Row style={{ margin: '0' }}><div className="shadow" style={{ marginRight: '2%', float: 'right' }}><p>Personal Projects</p></div></Row>
-                <Row style={{ margin: '0', textAlign: 'right'}}>
-                  <p style={{ fontSize: '2rem', marginRight: '2%'}}>After being introduced to coding 5 years ago I have developed a strong love for it. As my love grows, 
-                my skill set does as well. With respect to languages, I can develop in Java, Python, C++, JavaScript, and Bash. I am 
-                proficient in frameworks such as Apache Flink, Spring/Springboot, Node.JS, React, Thymeleaf, and PyGame. I know database 
-                standards such as PostgreSQL, MongoDB, and MySQL. I am familiar with tools such as Github, Docker, AWS, and Azure AD. 
-                Plus I know coding architecture styles such as REST and WebRTC/Socket Connections.</p>
+              <Col style={{width: '100%', margin: '0'}}>
+                <Row className="centeredRow">
+                  <div className="shadow" style={{ marginRight: '2%', float: 'right' }}><p>Personal Projects</p></div>
+                </Row>
+                <Row style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
+                  <p style={{ fontSize: '2rem'}}>Over the years I have made some projects, here they are</p>
+                </Row>
+                <Row style={{width: '100%', margin: '2% 0 0 0'}}>
+                  <Row className="centeredRow">
+                    <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Spotify Playlist Generator</p></div>
+                  </Row>
+                  <Row style={{ width: '90%', margin: '1% auto 0 auto', textAlign: 'center' }}>
+                    <p style={{ fontSize: '2rem'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </Row>
+                </Row>
+                <Row style={{width: '100%', margin: '2% 0 0 0'}}>
+                  <Row className="centeredRow">
+                    <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Viber</p></div>
+                  </Row>
+                  <Row style={{width: '100%', margin: '1% 0'}}>
+                    <img src={viberStream} style={{ marginRight: '0.5%', marginLeft: '1%' }} alt="Viber streamer view" width='48.5%' />
+                    <img src={viberListen} style={{ marginRight: '1%', marginLeft: '0.5%' }} alt="Viber listener view" width='48.5%' />
+                  </Row>
+                  <Row style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
+                    <p style={{ fontSize: '2rem'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </Row>
+                </Row>
+                <Row style={{width: '100%', margin: '2% 0 0 0'}}>
+                  <Row className="centeredRow">
+                    <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Whiteboards.tech</p></div>
+                  </Row>
+                  <Row style={{width: '100%', margin: '1% 0'}}>
+                    <img src={whiteboards} style={{ margin: '0 25.75%' }} alt="Whiteboards.tech app" width='48.5%' />
+                  </Row>
+                  <Row style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
+                    <p style={{ fontSize: '2rem'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </Row>
+                </Row>
+                <Row style={{width: '100%', margin: '2% 0 0 0'}}>
+                  <Row className="centeredRow">
+                    <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Screenshare.pro</p></div>
+                  </Row>
+                  <Row style={{width: '100%', margin: '1% 0'}}>
+                    <img src={screenshareStream} style={{ marginRight: '0.5%', marginLeft: '1%' }} alt="Screenshare.pro streamer view" width='48.5%' />
+                    <img src={screenshareWatch} style={{ marginRight: '1%', marginLeft: '0.5%' }} alt="Screenshare.pro watcher view" width='48.5%' />
+                  </Row>
+                  <Row style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
+                    <p style={{ fontSize: '2rem'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </Row>
+                </Row>
+                <Row style={{width: '100%', margin: '2% 0 0 0'}}>
+                  <Row className="centeredRow">
+                    <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Pokémon Online Battle Simulator</p></div>
+                  </Row>
+                  <Row style={{ width: '90%', margin: '1% auto 0 auto', textAlign: 'center' }}>
+                    <p style={{ fontSize: '2rem'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </Row>
                 </Row>
               </Col>
             </Row>
