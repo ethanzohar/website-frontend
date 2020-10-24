@@ -90,7 +90,9 @@ class HomePage2 extends Component {
             </Row>
             <Row id="TechSkills" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ff8583'}}>
               <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
-                Text goes here
+              <div className="shadow" style={{ marginLeft: '2%' }}>
+                  <p>Education</p>
+                </div>
               </Col>
               <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right'}}>
               <Document
