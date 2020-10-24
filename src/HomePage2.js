@@ -70,10 +70,10 @@ class HomePage2 extends Component {
               </Col>
               <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right', position: 'relative', height: '100vh'}}>
                 <div className="shadow shadowHover" style={{ top: '5.25vh', right: '0px', position: 'absolute' }}>
-                  <a href="#TechSkills" className="cancelATag"><p>Technical Skills</p></a>
+                <a href="#Education" className="cancelATag"><p>Education</p></a>
                 </div>
                 <div className="shadow shadowHover" style={{ top: '19.97vh', right: '0px', position: 'absolute' }}>
-                  <a href="#Education" className="cancelATag"><p>Education</p></a>
+                  <a href="#TechSkills" className="cancelATag"><p>Technical Skills</p></a>
                 </div>
                 <div className="shadow shadowHover" style={{ top: '34.69vh', right: '0px', position: 'absolute' }}>
                   <a href="#IndExp" className="cancelATag"><p>Industry Experience</p></a>
@@ -88,11 +88,16 @@ class HomePage2 extends Component {
                 </div>
               </Col>
             </Row>
-            <Row id="TechSkills" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ff8583'}}>
+            <Row id="Education" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ff8583'}}>
               <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
-              <div className="shadow" style={{ marginLeft: '2%' }}>
-                  <p>Education</p>
-                </div>
+                <Row style={{ margin: '0' }}><div className="shadow" style={{ marginLeft: '2%' }}><p>Education</p></div></Row>
+                <Row style={{ margin: '0' }}>
+                  <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>After being introduced to coding 5 years ago I have developed a strong love for it. As my love grows, 
+                my skill set does as well. With respect to languages, I can develop in Java, Python, C++, JavaScript, and Bash. I am 
+                proficient in frameworks such as Apache Flink, Spring/Springboot, Node.JS, React, Thymeleaf, and PyGame. I know database 
+                standards such as PostgreSQL, MongoDB, and MySQL. I am familiar with tools such as Github, Docker, AWS, and Azure AD. 
+                Plus I know coding architecture styles such as REST and WebRTC/Socket Connections.</p>
+                </Row>
               </Col>
               <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right'}}>
               <Document
@@ -120,9 +125,119 @@ class HomePage2 extends Component {
               </Document>
               </Col>
             </Row>
-            <Row id="Education" style={{width: '100%', margin: '0', height: '100vh', backgroundColor: 'yellow'}}>a</Row>
-            <Row id="IndExp" style={{width: '100%', margin: '0', height: '100vh', backgroundColor: 'red'}}>a</Row>
-            <Row id="PerProj" style={{width: '100%', margin: '0', height: '100vh', backgroundColor: 'blue'}}>a</Row>
+            <Row id="TechSkills" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ffeded'}}>
+              <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
+                <Document
+                  file={this.state.file}
+                  onLoadSuccess={this.onDocumentLoadSuccess}
+                  className="leftDoc"
+                >
+                  <Page pageNumber={this.state.pageNumber} />
+                <div className="page-controls">
+                  <button
+                    type="button"
+                    disabled={this.state.pageNumber <= 1}
+                    onClick={this.previousPage}
+                  >
+                    {'<'}
+                  </button>
+                  <span>{`${this.state.pageNumber} of ${this.state.numPages}`}</span>
+                  <button
+                    type="button"
+                    disabled={this.state.pageNumber >= this.state.numPages}
+                    onClick={this.nextPage}
+                  >
+                  {'>'}
+                  </button>
+                </div>
+                </Document>
+              </Col>
+              <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right'}}>
+                <Row style={{ margin: '0' }}><div className="shadow" style={{ marginRight: '2%', float: 'right' }}><p>Technical Skills</p></div></Row>
+                <Row style={{ margin: '0', textAlign: 'right'}}>
+                  <p style={{ fontSize: '2rem', marginRight: '2%'}}>After being introduced to coding 5 years ago I have developed a strong love for it. As my love grows, 
+                my skill set does as well. With respect to languages, I can develop in Java, Python, C++, JavaScript, and Bash. I am 
+                proficient in frameworks such as Apache Flink, Spring/Springboot, Node.JS, React, Thymeleaf, and PyGame. I know database 
+                standards such as PostgreSQL, MongoDB, and MySQL. I am familiar with tools such as Github, Docker, AWS, and Azure AD. 
+                Plus I know coding architecture styles such as REST and WebRTC/Socket Connections.</p>
+                </Row>
+              </Col>
+            </Row>
+            <Row id="IndExp" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ff8583'}}>
+              <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
+                <Row style={{ margin: '0' }}><div className="shadow" style={{ marginLeft: '2%' }}><p>Education</p></div></Row>
+                <Row style={{ margin: '0' }}>
+                  <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>After being introduced to coding 5 years ago I have developed a strong love for it. As my love grows, 
+                my skill set does as well. With respect to languages, I can develop in Java, Python, C++, JavaScript, and Bash. I am 
+                proficient in frameworks such as Apache Flink, Spring/Springboot, Node.JS, React, Thymeleaf, and PyGame. I know database 
+                standards such as PostgreSQL, MongoDB, and MySQL. I am familiar with tools such as Github, Docker, AWS, and Azure AD. 
+                Plus I know coding architecture styles such as REST and WebRTC/Socket Connections.</p>
+                </Row>
+              </Col>
+              <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right'}}>
+              <Document
+                file={this.state.file}
+                onLoadSuccess={this.onDocumentLoadSuccess}
+              >
+                <Page pageNumber={this.state.pageNumber} />
+              <div className="page-controls">
+                <button
+                  type="button"
+                  disabled={this.state.pageNumber <= 1}
+                  onClick={this.previousPage}
+                >
+                  {'<'}
+                </button>
+                <span>{`${this.state.pageNumber} of ${this.state.numPages}`}</span>
+                <button
+                  type="button"
+                  disabled={this.state.pageNumber >= this.state.numPages}
+                  onClick={this.nextPage}
+                >
+                {'>'}
+                </button>
+              </div>
+              </Document>
+              </Col>
+            </Row>
+            <Row id="PerProj" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ffeded'}}>
+              <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
+                <Document
+                  file={this.state.file}
+                  onLoadSuccess={this.onDocumentLoadSuccess}
+                  className="leftDoc"
+                >
+                  <Page pageNumber={this.state.pageNumber} />
+                <div className="page-controls">
+                  <button
+                    type="button"
+                    disabled={this.state.pageNumber <= 1}
+                    onClick={this.previousPage}
+                  >
+                    {'<'}
+                  </button>
+                  <span>{`${this.state.pageNumber} of ${this.state.numPages}`}</span>
+                  <button
+                    type="button"
+                    disabled={this.state.pageNumber >= this.state.numPages}
+                    onClick={this.nextPage}
+                  >
+                  {'>'}
+                  </button>
+                </div>
+                </Document>
+              </Col>
+              <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right'}}>
+                <Row style={{ margin: '0' }}><div className="shadow" style={{ marginRight: '2%', float: 'right' }}><p>Personal Projects</p></div></Row>
+                <Row style={{ margin: '0', textAlign: 'right'}}>
+                  <p style={{ fontSize: '2rem', marginRight: '2%'}}>After being introduced to coding 5 years ago I have developed a strong love for it. As my love grows, 
+                my skill set does as well. With respect to languages, I can develop in Java, Python, C++, JavaScript, and Bash. I am 
+                proficient in frameworks such as Apache Flink, Spring/Springboot, Node.JS, React, Thymeleaf, and PyGame. I know database 
+                standards such as PostgreSQL, MongoDB, and MySQL. I am familiar with tools such as Github, Docker, AWS, and Azure AD. 
+                Plus I know coding architecture styles such as REST and WebRTC/Socket Connections.</p>
+                </Row>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </div>
