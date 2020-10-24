@@ -165,7 +165,7 @@ class HomePage2 extends Component {
             </Row>
             <Row id="IndExp" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ff8583'}}>
               <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
-                <Row style={{ margin: '0' }}><div className="shadow" style={{ marginLeft: '2%' }}><p>Education</p></div></Row>
+                <Row style={{ margin: '0' }}><div className="shadow" style={{ marginLeft: '2%' }}><p>Industry Experience</p></div></Row>
                 <Row style={{ margin: '0' }}>
                   <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>After being introduced to coding 5 years ago I have developed a strong love for it. As my love grows, 
                 my skill set does as well. With respect to languages, I can develop in Java, Python, C++, JavaScript, and Bash. I am 
