@@ -101,10 +101,10 @@ class HomePage2 extends Component {
               </Col>
               <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right'}}>
               <Document
-                file={this.state.file}
+                file={transcript}
                 onLoadSuccess={this.onDocumentLoadSuccess}
               >
-                <Page pageNumber={this.state.pageNumber} />
+                <Page scale="1.17" pageNumber={this.state.pageNumber} />
               <div className="page-controls">
                 <button
                   type="button"
@@ -164,39 +164,80 @@ class HomePage2 extends Component {
               </Col>
             </Row>
             <Row id="IndExp" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ff8583'}}>
-              <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
+              <Col style={{width: '60%', margin: '0', display: 'inline-block'}}>
                 <Row style={{ margin: '0' }}><div className="shadow" style={{ marginLeft: '2%' }}><p>Industry Experience</p></div></Row>
                 <Row style={{ margin: '0' }}>
-                  <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>After being introduced to coding 5 years ago I have developed a strong love for it. As my love grows, 
-                my skill set does as well. With respect to languages, I can develop in Java, Python, C++, JavaScript, and Bash. I am 
-                proficient in frameworks such as Apache Flink, Spring/Springboot, Node.JS, React, Thymeleaf, and PyGame. I know database 
-                standards such as PostgreSQL, MongoDB, and MySQL. I am familiar with tools such as Github, Docker, AWS, and Azure AD. 
-                Plus I know coding architecture styles such as REST and WebRTC/Socket Connections.</p>
+                  <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about being in coop
+                  and how I already have 1 full year of industry experience.</p>
+                </Row>
+                <Row style={{ margin: '2% 0 0 1%' }}>
+                  <Row style={{ marginBottom: '1%' }}>
+                    <Col>
+                    <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>D2L</p></div>
+                    </Col>
+                    <Col>
+                      <div className="shadow" style={{ marginLeft: '1%' }}>
+                        <p style={{fontSize: '2vw'}}>Software Developer</p>
+                        <p style={{fontSize: '1vw'}} className="smallShadow">September 2020 - December 2020</p>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row style={{ margin: '0' }}>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about my experience.</p>
+                  </Row>
+                </Row>
+                <Row style={{ margin: '2% 0 0 1%' }}>
+                  <Row style={{ marginBottom: '1%' }}>
+                    <Col>
+                    <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Mindbridge Ai</p></div>
+                    </Col>
+                    <Col>
+                      <div className="shadow" style={{ marginLeft: '1%' }}>
+                        <p style={{fontSize: '2vw'}}>{"Data Engineer & Pipeline Developer"}</p>
+                        <p style={{fontSize: '1vw'}} className="smallShadow">September 2019 - December 2019</p>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row style={{ margin: '0' }}>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about my experience.</p>
+                  </Row>
+                </Row>
+                <Row style={{ margin: '2% 0 0 1%' }}>
+                  <Row style={{ marginBottom: '1%' }}>
+                    <Col>
+                    <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Mindbridge Ai</p></div>
+                    </Col>
+                    <Col>
+                      <div className="shadow" style={{ marginLeft: '1%' }}>
+                        <p style={{fontSize: '2vw'}}>{"Full Stack & DevOps Developer"}</p>
+                        <p style={{fontSize: '1vw'}} className="smallShadow">January 2019 - April 2019</p>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row style={{ margin: '0' }}>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about my experience.</p>
+                  </Row>
+                </Row>
+                <Row style={{ margin: '2% 0 0 1%' }}>
+                  <Row style={{ marginBottom: '1%' }}>
+                    <Col>
+                    <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Plastic Mobile</p></div>
+                    </Col>
+                    <Col>
+                      <div className="shadow" style={{ marginLeft: '1%' }}>
+                        <p style={{fontSize: '2vw'}}>{"Software & Hardware Lab Intern"}</p>
+                        <p style={{fontSize: '1vw'}} className="smallShadow">July 2018 - August 2018</p>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row style={{ margin: '0' }}>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about my experience.</p>
+                  </Row>
                 </Row>
               </Col>
-              <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right'}}>
-              <Document
-                file={this.state.file}
-                onLoadSuccess={this.onDocumentLoadSuccess}
-              >
-                <Page pageNumber={this.state.pageNumber} />
-              <div className="page-controls">
-                <button
-                  type="button"
-                  disabled={this.state.pageNumber <= 1}
-                  onClick={this.previousPage}
-                >
-                  {'<'}
-                </button>
-                <span>{`${this.state.pageNumber} of ${this.state.numPages}`}</span>
-                <button
-                  type="button"
-                  disabled={this.state.pageNumber >= this.state.numPages}
-                  onClick={this.nextPage}
-                >
-                {'>'}
-                </button>
-              </div>
+              <Col style={{width: '40%', margin: '0', display: 'inline-block', float: 'right'}}>
+              <Document file={resume}>
+                <Page scale="1.17" pageNumber={1} />
               </Document>
               </Col>
             </Row>

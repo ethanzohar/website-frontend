@@ -59,6 +59,10 @@ body {
     margin: 0.5%;
 }
 
+.react-pdf__Page__annotations {
+    display: none;
+}
+
 .react-pdf__Page__canvas {
     width: 100% !important;
     height: 100% !important;
@@ -67,9 +71,6 @@ body {
 .react-pdf__Document:hover .page-controls {
     opacity: 1;
   }
-.firstDoc {
-    margin-right: 0;
-}
 
 .page-controls {
     position: absolute;

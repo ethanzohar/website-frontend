@@ -70,6 +70,10 @@ $shadow: unquote($shadow);
     }
 }
 
+.smallShadow {
+    @include long-shadow(text, #ff5350, 10, false, false, right);
+}
+
 .shadow:after {
     clear: both;
 }
