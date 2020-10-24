@@ -15,8 +15,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Route exact path="/" component={HomePage}></Route>
-      <Route exact path="/new" component={HomePage2}></Route>
+      <Route exact path="/old" component={HomePage}></Route>
+      <Route exact path="/" component={HomePage2}></Route>
       <Route exact path="/endpoints" component={Endpoints}></Route>
       <Route exact path="/spotify" component={Spotify}></Route>
       <Route exact path="/spotify/login" component={SpotifyLogin}></Route>
