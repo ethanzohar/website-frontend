@@ -1,0 +1,52 @@
+
+
+body {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 3vw;
+    color: black;
+}
+
+.mainHeader {
+    position: absolute;
+    right: 6vw;
+    width: inherit;
+    overflow: visible;
+    // transform: translate(-100px, 0);
+
+    div {
+        padding: 0;
+        margin: 0;
+        float: right;
+    }
+
+    p {
+        width: fit-content;
+    }
+}
+
+.headerImages {
+    margin: 10px 10px 0 10px;
+}
+
+.BaseApp {
+    //  background-image:linear-gradient(#ff8583, #ff5350);
+    /* background-image:linear-gradient(white, #ff8583); */
+    background-color: #ffcac9;
+    min-height: 100vh;
+    height: max-content;
+}
+
+.iconRow {
+    margin: 0;
+    text-align: center;
+
+    img {
+        width: 6%;
+    }
+}
+
+.centeredRow {
+    margin: 0 auto;
+    width: max-content;
+}

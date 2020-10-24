@@ -48,7 +48,6 @@ $shadow: unquote($shadow);
 }
 
 .shadow {
-    margin-bottom: 100px;
     padding: 2%;
     color: white;
     @include long-shadow(text, black, 15, false, false, right);
@@ -58,7 +57,7 @@ $shadow: unquote($shadow);
     width: max-content;
 
     p {
-        font-size: 8rem;
+        font-size: 4vw;
         margin: 0;
         padding:0;
     }
@@ -81,19 +80,20 @@ $shadow: unquote($shadow);
 }
 
 .shadowHover:hover {
-    @include long-shadow(text, black, 80, false, false, right);
-    transform: translate(-76px, -73px);
+    @include long-shadow(text, black, 60, false, false, right);
+    transform: translate(-46px, -44px);
+    overflow: visible;
 
     div {
-        width: calc(100% + 90px);
+        width: calc(100% + 4.6vw);
         height: 60px;
         margin: 0;
         padding:0;
     }
 
     p {
-        width: calc(100% + 90px);
-        height: calc(100% + 600px);
+        width: calc(100% + 4.6875vw);
+        height: calc(100% + 31.25vw);
         margin: 0;
         padding:0;
     }
