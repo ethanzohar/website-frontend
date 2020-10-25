@@ -1,6 +1,5 @@
 import React, { Component  } from 'react';
 import { pdfjs, Document, Page } from "react-pdf";
-import Gallery from 'react-photo-gallery';
 import headerImage1 from './images/headerImage1.jpg';
 import headerImage2 from './images/headerImage2.jpg';
 import headerImage3 from './images/headerImage3.jpg';
