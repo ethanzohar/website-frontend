@@ -1,9 +1,9 @@
 import React, { Component  } from 'react';
 import { pdfjs, Document, Page } from "react-pdf";
+import Gallery from 'react-photo-gallery';
 import headerImage1 from './images/headerImage1.jpg';
 import headerImage2 from './images/headerImage2.jpg';
 import headerImage3 from './images/headerImage3.jpg';
-import github from './images/github.svg';
 import linkedin from './images/linkedin.png';
 import instagram from './images/instagram.webp';
 import screenshareStream from './images/screenshareStream.png';
@@ -11,6 +11,8 @@ import screenshareWatch from './images/screenshareWatch.png';
 import viberListen from './images/viberListenView.png';
 import viberStream from './images/viberStreamView.png';
 import whiteboards from './images/whiteboards.png';
+import github from './images/github.svg';
+import collage from './images/collage.png';
 import transcript from './pdfs/transcript.pdf';
 import resume from './pdfs/resume.pdf';
 import Row from 'react-bootstrap/Row';
@@ -25,7 +27,7 @@ class HomePage2 extends Component {
   state = {
     file: transcript,
     numPages: null,
-    pageNumber: 1,
+    pageNumber: 1
   }
  
   onDocumentLoadSuccess = ({ numPages }) => {
@@ -131,31 +133,15 @@ class HomePage2 extends Component {
               </Col>
             </Row>
             <Row id="TechSkills" style={{width: '100%', margin: '0', height: 'max-content', backgroundColor: '#ffeded'}}>
+            {/* <Col style={{width: '100%', margin: '0'}}>
+                <Row className="centeredRow">
+                  <div className="shadow" style={{ marginRight: '2%', float: 'right' }}><p>Technical Skills</p></div>
+                </Row>
+              </Col> */}
               <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
-                <Document
-                  file={this.state.file}
-                  onLoadSuccess={this.onDocumentLoadSuccess}
-                  className="leftDoc"
-                >
-                  <Page pageNumber={this.state.pageNumber} />
-                <div className="page-controls">
-                  <button
-                    type="button"
-                    disabled={this.state.pageNumber <= 1}
-                    onClick={this.previousPage}
-                  >
-                    {'<'}
-                  </button>
-                  <span>{`${this.state.pageNumber} of ${this.state.numPages}`}</span>
-                  <button
-                    type="button"
-                    disabled={this.state.pageNumber >= this.state.numPages}
-                    onClick={this.nextPage}
-                  >
-                  {'>'}
-                  </button>
-                </div>
-                </Document>
+                <Row style={{width: '100%', margin: '1% 0'}}>
+                  <img src={collage} style={{ marginLeft: '2%' }} alt="Whiteboards.tech app" width='98%' />
+                </Row>
               </Col>
               <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right'}}>
                 <Row style={{ margin: '0' }}><div className="shadow" style={{ marginRight: '2%', float: 'right' }}><p>Technical Skills</p></div></Row>
