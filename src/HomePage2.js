@@ -31,7 +31,16 @@ const EDUCATION_TEXT = "Currently, I am in my third year of my Software Engineer
                         + " demand that comes from switching programs and entering second year.";
 const TECHNICAL_SKILLS_TEXT = "Over the 5 years that I have been coding I have been exposed to and mastered tons of languages, tools, and frameworks. Some of these have been self"
                               + " taught, while others have been learned either through school or during my work terms.";
-const D2L_TEXT = "";
+const D2L_TEXT = "Due to the COVID-19 pandemic, the entirety of this co-op was remote. At first I thought this would be a bad thing because it meant less social interaction with"
+                  + " my co-workers, but this actually turned out to be a blessing in disguise. Because I no longer had the privilege of being able to walk over to my co-workers"
+                  + " for every little thing, it forced me to become more independent. I was given more responsibility for the projects that I worked on and I was able to steer"
+                  + " the projects in the directions that I though were best. At D2L I worked on the innovation team where we would rapidly prototype new products and features that"
+                  + " would eventually be merged into the production codebase. I the main application that I worked on was a new user experience for individual teachers to access the product."
+                  + " This meant that I was in charge of the product that would allow D2L to enter a new market, my code would be the reason that D2L succeeds in the B to C market."
+                  + " I worked on a Node.JS and react stack creating an entirely new user experience with its own signup process and user management. This was my first time building"
+                  + " an application from the ground up that dealt with personally identifiable information. Because of this I learnt a lot about the different security measures that"
+                  + " must be put in place in order to protect our users. Working on this project also allowed me to improve upon my front-end capabilities as all of my other work"
+                  + " terms focused on back-end development.";
 const MINDBRIDGE_TEXT_2 = "During this co-op term I learned about big data concepts and the importance of efficient code. As my entire job revolved around enormous Excel"
                           + " spreadsheets and CSV files that were tens of millions of rows large, even the slightest inefficiency in my code would be detrimental. I"
                           + " learned the inner workings and subtleties of Apache Flink as I wrote several algorithms to analyze the financial data contained within the"
@@ -57,7 +66,13 @@ const PLASTIC_MOBILE_TEXT = "Working on an innovation team was a lot of fun beca
                            + " the use of ArCore and image recognition algorithms. QR codes were placed around the office and the application was able to triangulate"
                            + " its position in the office based on the codes that were visible. After implementing a path finding algorithm and a simple command queue,"
                            + " the Roomba was able to autonomously drive around the office and deliver coffee.";                              
-const PLAYLIST_TEXT = "";
+const PLAYLIST_TEXT = "Every Monday and Friday Spotify will release a custom playlist for all of their users with 30 curated songs for you to listen to. I honestly look"
+                      + " forward to when my new playlists come out and I always make it a point to listen to all of the songs in them. My music listening has gotten to the"
+                      + " point where I need even more new music to listen to, so I decided to give myself a custom playlist everyday. I set up a Node.js server running"
+                      + " on my AWS EC2 instance which runs a job everyday at 2am. In this job it uses Spotify's API to find my top songs and top artists from the past 6 months,"
+                      + " select 2 songs and 2 artists at random from those lists, finds 50 songs that are similar to the artists and songs from my top list, then places"
+                      + " them in my playlist. In this project I learnt about the OAuth2 flow through using Spotify's API as well as what is required to run a job daily"
+                      + " on a remote server.";
 const VIBER_TEXT = "";
 const WHITEBOARDS_TEXT = "";
 const SCREENSHARE_TEXT = "After working on some group projects with friends I found that there was no good solution to simple screen sharing. All sites or applications"
@@ -270,8 +285,9 @@ class HomePage2 extends Component {
               <Col style={{width: '60%', margin: '0', display: 'inline-block'}}>
                 <Row style={{ margin: '0' }}><div className="shadow" style={{ marginLeft: '2%' }}><p>Industry Experience</p></div></Row>
                 <Row style={{ margin: '0' }}>
-                  <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>Put some text here that talks about being in coop
-                  and how I already have 1 full year of industry experience.</p>
+                  <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>
+                  Being in Software Engineering at UWaterloo, I am given 6 co-op opportunities, each being 4 months in lenght. This means that I will graduate school already having 2 full years of industry experience under my belt. At this point in my career, I already have over a full year of industry experience.
+                  </p>
                 </Row>
                 <Row style={{ margin: '2% 0 0 1%' }}>
                   <Row style={{ marginBottom: '1%' }}>
@@ -281,7 +297,7 @@ class HomePage2 extends Component {
                     <Col>
                       <div className="shadow" style={{ marginLeft: '1%' }}>
                         <p style={{fontSize: '2vw'}}>Software Developer</p>
-                        <p style={{fontSize: '1vw'}} className="smallShadow">September 2020 - December 2020</p>
+                        <p style={{fontSize: '1vw'}} className="smallShadow">September 2020 - Present</p>
                       </div>
                     </Col>
                   </Row>
