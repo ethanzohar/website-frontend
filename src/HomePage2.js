@@ -22,6 +22,11 @@ import './homePage.scss';
 // sudo evn PATH=$PATH pm2 serve build 80 --name website --spa
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+const INTRO_TEXT = "After being introduced to coding 5 years ago I have developed a strong love for it. As my love grows," 
+                  + " my skill set does as well. With respect to languages, I can develop in Java, Python, C++, JavaScript, and Bash. I am"
+                  + " proficient in frameworks such as Apache Flink, Spring/Springboot, Node.JS, React, Thymeleaf, and PyGame. I know database"
+                  + " standards such as PostgreSQL, MongoDB, and MySQL. I am familiar with tools such as Github, Docker, AWS, and Azure AD."
+                  + " Plus I know coding architecture styles such as REST and WebRTC/Socket Connections.";
 const EDUCATION_TEXT = "Currently, I am in my third year of my Software Engineering degree at the University of Waterloo, but this is actually not the program that I was"
                         + " originally accepted for. I started my academic career at UWaterloo as a Computer Engineering major and it was in my first year of this program"
                         + " that I found my love for the software side of computers. After getting an academic ranking of 19/185 in my second semester with an average of"
@@ -80,8 +85,13 @@ const VIBER_TEXT = "While on the bus, I saw a man sitting across from me totally
                     + " Spotify session (using Spotify's API). Once hooked in to another user's session, your music is now synced up with them, when they pause you pause, when they"
                     + " skip then you skip as well. If instead you want to stream your music, there is a built in music navigation UI that will allow you to skip and pause songs"
                     + " directly from the UI. For this project I used React for my front-end as it allowed for easy integration with the Spotify and Google Maps API, and I used"
-                    + " a Springboot application running on my AWS EC2 instance for the back-end purely because I wanted to become more framiliar with Spring/Springboot.";
-const WHITEBOARDS_TEXT = "";
+                    + " a Springboot application running on my AWS EC2 instance for the back-end purely because I wanted to become more familiar with Spring/Springboot.";
+const WHITEBOARDS_TEXT = "Some of my greatest memories of my university career have come from late nights solving problems with my friends on the school whiteboards. Thanks"
+                          + " to COVID-19, doing that was near impossible, so me and my friends decided to make a tool that would give us that same feeling back. We decided"
+                          + " to build a whiteboard application with a live chat so if someone cannot join a voice call or video call to be there then they are still able to contribute."
+                          + " The application uses pure HTML and JS interacting with a Firebase datastore application. We used Firebase because it allowed for update notifications from the database"
+                          + " which facilitated the live updating nature of the application. This because an extremely useful tool for me and my friends as the COVID lock down went on and"
+                          + " it remains a tool that we use quite often.";
 const SCREENSHARE_TEXT = "After working on some group projects with friends I found that there was no good solution to simple screen sharing. All sites or applications"
                           + " would require downloads, logins, and friend requests to get working, but I wanted something simpler. So I made it! This was my first \"large scale\""
                           + " application that was distributed online so I learned a lot. I learned about deploying projects on dedicated servers, in this case I used an AWS"
@@ -145,12 +155,8 @@ class HomePage2 extends Component {
                   <div style={{padding: '0', margin: '0'}}><p style={{fontSize: '2rem'}}>ethan.zohar@uwaterloo.ca | 647-980-2177</p></div>
                 </Row>
                 <Row style={{ width: '100%', margin: '5% 2%', textAlign: 'center' }}>
-                  <p style={{ fontSize: '2rem'}}>After being introduced to coding 5 years ago I have developed a strong love for it. As my love grows, 
-                my skill set does as well. With respect to languages, I can develop in Java, Python, C++, JavaScript, and Bash. I am 
-                proficient in frameworks such as Apache Flink, Spring/Springboot, Node.JS, React, Thymeleaf, and PyGame. I know database 
-                standards such as PostgreSQL, MongoDB, and MySQL. I am familiar with tools such as Github, Docker, AWS, and Azure AD. 
-                Plus I know coding architecture styles such as REST and WebRTC/Socket Connections.</p>
-                  </Row>
+                  <p style={{ fontSize: '2rem'}}>{INTRO_TEXT}</p>
+                </Row>
               </Col>
               <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right', position: 'relative', height: '100vh'}}>
                 <div className="shadow shadowHover" style={{ top: '5.25vh', right: '0px', position: 'absolute' }}>
@@ -381,6 +387,12 @@ class HomePage2 extends Component {
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://github.com/ethanzohar/spotify-playlist-generator" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Spotify Playlist Generator</p></a></div>
                   </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">
+                      <a href="https://github.com/ethanzohar/spotify-playlist-generator" className="cancelATag" target="_blank">github.com/ethanzohar/spotify-playlist-generator</a> | October 2020</p>
+                    </div>
+                  </Row>
                   <Row style={{ width: '90%', margin: '1% auto 0 auto', textAlign: 'center' }}>
                     <p style={{ fontSize: '2rem'}}>{PLAYLIST_TEXT}</p>
                   </Row>
@@ -388,6 +400,12 @@ class HomePage2 extends Component {
                 <Row style={{width: '100%', margin: '2% 0 0 0'}}>
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://github.com/ethanzohar/Viber" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Viber</p></a></div>
+                  </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">
+                      <a href="https://github.com/ethanzohar/Viber" className="cancelATag" target="_blank">github.com/ethanzohar/Viber</a> | April 2020 - May 2020</p>
+                    </div>
                   </Row>
                   <Row style={{width: '100%', margin: '1% 0'}}>
                     <img src={viberStream} style={{ marginRight: '0.5%', marginLeft: '1%' }} alt="Viber streamer view" width='48.5%' />
@@ -401,6 +419,11 @@ class HomePage2 extends Component {
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://whiteboards.tech" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Whiteboards.tech</p></a></div>
                   </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">May 2020</p>
+                    </div>
+                  </Row>
                   <Row style={{width: '100%', margin: '1% 0'}}>
                     <img src={whiteboards} style={{ margin: '0 25.75%' }} alt="Whiteboards.tech app" width='48.5%' />
                   </Row>
@@ -411,6 +434,11 @@ class HomePage2 extends Component {
                 <Row style={{width: '100%', margin: '2% 0 0 0'}}>
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://screenshare.pro" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Screenshare.pro</p></a></div>
+                  </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">July 2019 - November 2019</p>
+                    </div>
                   </Row>
                   <Row style={{width: '100%', margin: '1% 0'}}>
                     <img src={screenshareStream} style={{ marginRight: '0.5%', marginLeft: '1%' }} alt="Screenshare.pro streamer view" width='48.5%' />
@@ -423,6 +451,12 @@ class HomePage2 extends Component {
                 <Row style={{width: '100%', margin: '2% 0 0 0'}}>
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Pokémon Online Battle Simulator</p></a></div>
+                  </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">
+                      <a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" target="_blank">github.com/Computer-Kids-Club/pokeman</a> | April 2018 - May 2018</p>
+                    </div>
                   </Row>
                   <Row style={{ width: '90%', margin: '1% auto 0 auto', textAlign: 'center' }}>
                     <p style={{ fontSize: '2rem'}}>{POKEMON_TEXT}</p>
