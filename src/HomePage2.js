@@ -73,7 +73,14 @@ const PLAYLIST_TEXT = "Every Monday and Friday Spotify will release a custom pla
                       + " select 2 songs and 2 artists at random from those lists, finds 50 songs that are similar to the artists and songs from my top list, then places"
                       + " them in my playlist. In this project I learnt about the OAuth2 flow through using Spotify's API as well as what is required to run a job daily"
                       + " on a remote server.";
-const VIBER_TEXT = "";
+const VIBER_TEXT = "While on the bus, I saw a man sitting across from me totally jamming out to some music, head bobbing and everything. I was so curious as to what he was"
+                    + " listening to that for the rest of the bus ride, I thought of new ways to figure out what music people are listening to. It was there that I came up with"
+                    + " the idea for Viber. This is a music sharing app the hooks into Spotify's API to allow users to join other peoples' listening streams. The UI uses"
+                    + " the Google Maps API along with geolocation to place markers for the users in your area. From here you can click on them and have them control your"
+                    + " Spotify session (using Spotify's API). Once hooked in to another user's session, your music is now synced up with them, when they pause you pause, when they"
+                    + " skip then you skip as well. If instead you want to stream your music, there is a built in music navigation UI that will allow you to skip and pause songs"
+                    + " directly from the UI. For this project I used React for my front-end as it allowed for easy integration with the Spotify and Google Maps API, and I used"
+                    + " a Springboot application running on my AWS EC2 instance for the back-end purely because I wanted to become more framiliar with Spring/Springboot.";
 const WHITEBOARDS_TEXT = "";
 const SCREENSHARE_TEXT = "After working on some group projects with friends I found that there was no good solution to simple screen sharing. All sites or applications"
                           + " would require downloads, logins, and friend requests to get working, but I wanted something simpler. So I made it! This was my first \"large scale\""
