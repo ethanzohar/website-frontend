@@ -1,3 +1,7 @@
+$dark-color: #ff8583;
+$light-color: #ffeded;
+$font-color: #ff5350;
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,7 +10,7 @@ body {
     font-family: sans-serif;
     font-weight: bold;
     font-size: 3vw;
-    color: #ff5350;
+    color: $font-color;
 }
 
 .mainHeader {
@@ -34,7 +38,7 @@ body {
 .BaseApp {
     /* background-image:linear-gradient(white, #ff8583); */
     background-color: #ffcac9;
-    background-color: #ffeded;
+    background-color: $light-color;
     // background-color: #1f1f1f;
     // background-image:linear-gradient(#ff5350, #111111);
     min-height: 100vh;
@@ -129,3 +133,122 @@ body {
     text-decoration: none;
     background: inherit;
 }
+
+#PerProj, #TechSkills {
+  background-color: $light-color;
+}
+
+#Education, #IndExp {
+  background-color: $dark-color;
+}
+
+@mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
+  $shadow: '';
+  @if $skew == false or $type == text{
+      @if $direction == right {
+      @for $i from 0 to $length - 1 {
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $color + ',';
+      }
+      }
+      @if $direction == left {
+      @for $i from 0 to $length - 1 {
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $color + ',';
+          }
+      }
+      }
+          
+      @if $fadeout == true{
+      @for $i from 1 to $length - 1 {
+      @if $type == text or $skew == false{
+          @if $direction == right{
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+          }
+          @if $direction == left{
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+          }
+      }
+      @if ($type == box) and $skew == true{
+          @if $direction == right {
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+          }
+          @if $direction == left {
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+          }
+      }
+  }
+  $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba($color, 0);
+  }
+  @if $fadeout == false{
+      @if $skew == true and ( $type == box ){
+      @for $i from 0 to $length - 1 {
+              $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .1 + 'px ' + $color + ',';
+      }
+      }
+      $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba(0,0,0,0);
+  }
+  $shadow: unquote($shadow);
+  @if $type == 'box' {box-shadow: $shadow;}
+  @if $type == 'text' {text-shadow: $shadow;}
+  }
+  
+  .shadow {
+      padding: 0 1% 0 0;
+      color: white;
+      @include long-shadow(text, $font-color, 15, false, false, right);
+      display: inline-block;
+      float: left;
+      margin-right: 2%;
+      width: max-content;
+  
+      p {
+          font-size: 4vw;
+          margin: 0;
+          padding:0;
+      }
+  
+      div {
+          width: 0;
+          height: 0;
+          margin: 0;
+          padding:0;
+      }
+  }
+  
+  .smallShadow {
+      @include long-shadow(text, $font-color, 10, false, false, right);
+  }
+  
+  .shadow:after {
+      clear: both;
+  }
+  
+  .shadowHover {
+      cursor: pointer;
+      transition: all .2s;
+  }
+  
+  .shadowHover:hover {
+      @include long-shadow(text, $font-color, 60, false, false, right);
+      transform: translate(0, -42px);
+      padding: 0 6% 4% 0;
+      // overflow: visible;
+  
+      // div {
+      //     width: calc(100% + 4.6vw);
+      //     height: 60px;
+      //     margin: 0;
+      //     padding:0;
+      // }
+  
+      // p {
+      //     width: calc(100% + 4.6875vw);
+      //     height: calc(100% + 31.25vw);
+      //     margin: 0;
+      //     padding:0;
+      // }
+  }
+  
+  .headerImages img {
+      border-radius: 25px;
+      // @include long-shadow(box, black, 15, false, false, right);
+  }
