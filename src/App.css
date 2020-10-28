@@ -251,7 +251,9 @@ html {
 body {
   height: 100%;
   margin: 0;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: linear-gradient(#d4bcd4, black);
+  background-image: linear-gradient(#d4bcd4, black); */
+  
+  background-color: #ffcac9;
 }
