@@ -1,13 +1,21 @@
 // $dark-color: #ff8583;
 // $light-color: #ffeded;
 // $font-color: #ff5350;
+// $dark-color: #a0a2fa;
+// $light-color: #fffeed;
+// $font-color: black;
 
-$dark-color: #ff8583;
-$light-color: #ffeded;
-$font-color: #ff5350;
+$dark-color: #88b1ff;
+$light-color: #cbddff;
+// $light-color: #fffeed;
+$font-color: #0c2658;
 
 html {
     scroll-behavior: smooth;
+}
+
+p {
+    text-align: justify;
 }
 
 body {
@@ -37,6 +45,18 @@ body {
 
 .headerImages {
     margin: 10px 10px 0 10px;
+    
+    img {
+        border: 3px solid $font-color;
+        border-radius: 25px;
+    }
+}
+
+#PerProj {
+    img {
+        border: 3px solid $font-color;
+        border-radius: 10px;
+    }
 }
 
 .BaseApp {
@@ -250,9 +270,4 @@ body {
       //     margin: 0;
       //     padding:0;
       // }
-  }
-  
-  .headerImages img {
-      border-radius: 25px;
-      // @include long-shadow(box, black, 15, false, false, right);
   }

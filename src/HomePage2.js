@@ -105,7 +105,7 @@ const SCREENSHARE_TEXT = "After working on some group projects with friends I fo
 const POKEMON_TEXT = "For my final project of my highschool career my friends and I decided to go all out. We went with the idea of making a complete clone of Pokémon"
                       + " Showdown with local multiplayer. This project taught me so much and was one of the main sources for my love of programming. I used websockets"
                       + " for the first time ever, I used a separate frontend and backend written in different languages for the first time, but most importantly I"
-                      + " used web scraping for the first time ever. I used an online database which contained all of the Pokemon's statistics, sprites, and move information."
+                      + " used web scraping for the first time ever. I used an online database which contained all of the Pokémon's statistics, sprites, and move information."
                       + " Figuring out that the code I write could interact with things that other people have done opened so many doors for my coding career and gave me tons"
                       + " more ideas on things to make with this new found knowledge. This project taught me how to work in a team, how to use source control tools, and how to"
                       + " solve problems that I have never solved before.";
@@ -194,24 +194,24 @@ class HomePage2 extends Component {
                   <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>{EDUCATION_TEXT}</p>
                 </Row>
                 <Row style={{ margin: '0 0 10px 0' }}>
-                  <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '2.5vw' }}>Important Courses</p></div>
+                  <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '2.5vw' }}>Highlighted Courses</p></div>
                 </Row>
                 <Row style={{ margin: '0' }}>
                   <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'left'}}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- ECE 105 | Fundamentals of Programming (100%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- ECE 108 | Discrete MAthematics and Logic 1 (94%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- ECE 124 | Digital Circuits  and Systems (87%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- ECE 104 | Linear Circuits (86%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- CS 241 | Foundations of Sequential Programs (91%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- CS 245 | Logic and Computation (86%)</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 105 | Fundamentals of Programming | 100%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 108 | Discrete Mathematics and Logic 1 | 94%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 124 | Digital Circuits  and Systems | 87%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 104 | Linear Circuits | 86%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 241 | Foundations of Sequential Programs | 91%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 245 | Logic and Computation | 86%</p>
                   </Col>
                   <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- ECE 222 | Digital Computers (89%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- CS 240 | Data Structures and Data Management (79%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- CS 247 | Software Engineering Principles (83%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- CS 348 | Intro. to Database Management (97%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- MATH 239 | Intro. to Combinatorics (80%)</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>- STAT 231 | Statistics (83%)</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 222 | Digital Computers | 89%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 240 | Data Structures and Data Management | 79%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 247 | Software Engineering Principles | 83%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 348 | Intro. to Database Management | 97%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>MATH 239 | Intro. to Combinatorics | 80%</p>
+                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>STAT 231 | Statistics | 83%</p>
                   </Col>
                 </Row>
               </Col>
@@ -242,49 +242,49 @@ class HomePage2 extends Component {
               </Col>
             </Row>
             <Row id="TechSkills" style={{width: '100%', margin: '0', height: 'max-content'}}>
-              <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
+              <Col style={{width: '40%', margin: '0', display: 'inline-block'}}>
                 <Row style={{width: '100%', margin: '1% 0'}}>
                   <img src={collage} style={{ marginLeft: '2%' }} alt="languages, tools, and frameworks" width='98%' />
                 </Row>
               </Col>
-              <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right', padding: '0 2%'}}>
-                <Row style={{ margin: '0' }}><div className="shadow" style={{ width: '100%', textAlign: 'center' }}><p>Technical Skills</p></div></Row>
-                <Row style={{ margin: '0', textAlign: 'center'}}>
+              <Col style={{width: '60%', margin: '0', display: 'inline-block', float: 'right', padding: '0 2%'}}>
+                <Row style={{ margin: '0' }}><div className="shadow" style={{ width: '100%' }}><p style={{ textAlign: 'right'  }}>Technical Skills</p></div></Row>
+                <Row style={{ margin: '0'}}>
                   <p style={{ fontSize: '2rem', marginRight: '2%'}}>{TECHNICAL_SKILLS_TEXT}</p>
                 </Row>
                 <Row style={{ margin: '0 0 10px 0' }}>
-                  <div className="shadow" style={{ width: '100%', textAlign: 'center' }}><p style={{ fontSize: '2.5vw' }}>Languages, Tools, and Frameworks</p></div>
+                  <div className="shadow" style={{ width: '100%'}}><p style={{ fontSize: '2.5vw', textAlign: 'right'  }}>Languages, Tools, and Frameworks</p></div>
                 </Row>
-                <Row style={{margin: '0 8%', width: '100%'}}>
-                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'left'}}>
+                <Row style={{margin: '0', width: '100%'}}>
+                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
                     <p style={{ fontSize: '2rem'}}>- Java</p>
                     <p style={{ fontSize: '2rem'}}>- C++</p>
                     <p style={{ fontSize: '2rem'}}>- Python</p>
                     <p style={{ fontSize: '2rem'}}>- JavaScript</p>
                     <p style={{ fontSize: '2rem'}}>- WebRTC</p>
                   </Col>
-                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'left'}}>
+                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
                     <p style={{ fontSize: '2rem'}}>- Bash</p>
                     <p style={{ fontSize: '2rem'}}>- Github</p>
                     <p style={{ fontSize: '2rem'}}>- AWS</p>
                     <p style={{ fontSize: '2rem'}}>- Azure</p>
                     <p style={{ fontSize: '2rem'}}>- JDBC</p>
                   </Col>
-                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'left'}}>
+                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
                     <p style={{ fontSize: '2rem'}}>- Apache Flink</p>
                     <p style={{ fontSize: '2rem'}}>- Springboot/Spring</p>
                     <p style={{ fontSize: '2rem'}}>- Node.js</p>
                     <p style={{ fontSize: '2rem'}}>- React</p>
                     <p style={{ fontSize: '2rem'}}>- Docker</p>
                   </Col>
-                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block'}}>
+                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
                     <p style={{ fontSize: '2rem'}}>- Flask</p>
                     <p style={{ fontSize: '2rem'}}>- Thymeleaf</p>
                     <p style={{ fontSize: '2rem'}}>- PostgreSQL</p>
                     <p style={{ fontSize: '2rem'}}>- MongoDB</p>
                     <p style={{ fontSize: '2rem'}}>- HTML</p>
                   </Col>
-                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block'}}>
+                  <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
                     <p style={{ fontSize: '2rem'}}>- MySQL</p>
                     <p style={{ fontSize: '2rem'}}>- Firebase</p>
                     <p style={{ fontSize: '2rem'}}>- REST</p>
