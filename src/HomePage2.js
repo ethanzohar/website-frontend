@@ -36,41 +36,10 @@ const EDUCATION_TEXT = "Currently, I am in my third year of my Software Engineer
                         + " demand that comes from switching programs and entering second year.";
 const TECHNICAL_SKILLS_TEXT = "Over the 5 years that I have been coding I have been exposed to and mastered tons of languages, tools, and frameworks. Some of these have been self"
                               + " taught, while others have been learned either through school or during my work terms.";
-const D2L_TEXT = "Due to the COVID-19 pandemic, the entirety of this co-op was remote. At first I thought this would be a bad thing because it meant less social interaction with"
-                  + " my co-workers, but this actually turned out to be a blessing in disguise. Because I no longer had the privilege of being able to walk over to my co-workers"
-                  + " for every little thing, it forced me to become more independent. I was given more responsibility for the projects that I worked on and I was able to steer"
-                  + " the projects in the directions that I though were best. At D2L I worked on the innovation team where we would rapidly prototype new products and features that"
-                  + " would eventually be merged into the production codebase. I the main application that I worked on was a new user experience for individual teachers to access the product."
-                  + " This meant that I was in charge of the product that would allow D2L to enter a new market, my code would be the reason that D2L succeeds in the B to C market."
-                  + " I worked on a Node.JS and react stack creating an entirely new user experience with its own signup process and user management. This was my first time building"
-                  + " an application from the ground up that dealt with personally identifiable information. Because of this I learnt a lot about the different security measures that"
-                  + " must be put in place in order to protect our users. Working on this project also allowed me to improve upon my front-end capabilities as all of my other work"
-                  + " terms focused on back-end development.";
-const MINDBRIDGE_TEXT_2 = "During this co-op term I learned about big data concepts and the importance of efficient code. As my entire job revolved around enormous Excel"
-                          + " spreadsheets and CSV files that were tens of millions of rows large, even the slightest inefficiency in my code would be detrimental. I"
-                          + " learned the inner workings and subtleties of Apache Flink as I wrote several algorithms to analyze the financial data contained within the"
-                          + " spreadsheets. I learned the benefits and pitfalls of different database formats as I performed an internal data storage and data transfer"
-                          + " overhaul which moved our pipelines database from MongoDB to PostgreSQL. From this change I was able to reduce the size of our codebase by"
-                          + " 40% and increase the pipeline's runtime efficiency by upwards of 35%. Finally, I learned the nuances of cross-team communication as I"
-                          + " worked with the front-end team in order to help format our data in a manner that was usable and convenient for them.";
-const MINDBRIDGE_TEXT_1 = "Working as an internal tools developer on a small team means that you get to see a new feature from start to finish, but that also means that"
-                          + " you must be capable of completing every step along the way. For this co-op I did just that, I worked closely with the customer service team"
-                          + " and developed tools which would reduce the amount of manual work they would have to do. The main tool that I developed for them was an Excel"
-                          + " spreadsheet and CSV CLI tool. This tool would sanitize the data and verify that it was of the correct format before entering the pipeline."
-                          + " It was able to split and concatenate multiple files in order to allow the CS team to manually inspect the data. After the introduction of" 
-                          + " this tool it reduced the CS teams overhead by 50+ weekly and is now being integrated into the main app. Another tool that I made for the CS"
-                          + " team as an admin interface which would allow manual overrides to each of the customers accounts with options for manual entry into the accounts."
-                          + " Some example operations included adding and deleting users, changing the server that they were accessing, and altering the jobs that they"
-                          + " were running. I learned about Azure AD, Bash, and Terraform through the development of a backup disk cleanup script which would save" 
-                          + " snapshots from specific time periods to create a chronological buffer. Finally, I learned about the importance of robust code through working"
-                          + " with the company CISO to develop critical security features that directly affect the end users.";
-const PLASTIC_MOBILE_TEXT = "Working on an innovation team was a lot of fun because I was given complete freedom to experiment and take my projects in whichever"
-                           + " direction I desired. I worked on an Android application that utilized Google's ArCore to control a Roomba. The end product was a"
-                           + " coffee delivering robot where the users would simply press a button on their phone ordering coffee and the Roomba would take care of the" 
-                           + " rest. With the Android device attached to the top of the Roomba, the device was able to determine its position within the office through"
-                           + " the use of ArCore and image recognition algorithms. QR codes were placed around the office and the application was able to triangulate"
-                           + " its position in the office based on the codes that were visible. After implementing a path finding algorithm and a simple command queue,"
-                           + " the Roomba was able to autonomously drive around the office and deliver coffee.";                              
+const D2L_TEXT = "Due to the COVID-19 pandemic, the entirety of this co-op was remote. At first I thought this would be a bad thing because it meant less social interaction with my co-workers, but this actually turned out to be a blessing in disguise. I was forced to become more independent and I was given more responsibility for the projects that I worked on. This allowed me to be able to steer the projects in the directions that I though were best.";
+const MINDBRIDGE_TEXT_2 = "During this co-op term I learned about big data concepts and the importance of efficient code. As my entire job revolved around enormous Excel spreadsheets and CSV files that were tens of millions of rows large, even the slightest inefficiency in my code would be detrimental. I learned the inner workings and subtleties of Apache Flink as I wrote several algorithms to analyze the financial data contained within the spreadsheets.";
+const MINDBRIDGE_TEXT_1 = "Working as an internal tools developer on a small team means that you get to see a new feature from start to finish, but that also means that you must be capable of completing every step along the way. For this co-op I did just that, I worked closely with the customer service team and developed tools which would reduce the amount of manual work they would have to do.";
+const PLASTIC_MOBILE_TEXT = "Working on an innovation team was a lot of fun because I was given complete freedom to experiment and take my projects in whichever direction I desired. I worked on an Android application that utilized Google's ArCore to control a Roomba. The end product was a coffee delivering robot where the users would simply press a button on their phone ordering coffee and the Roomba would take care of the rest. With the Android device attached to the top of the Roomba, the device was able to determine its position within the office through the use of ArCore and image recognition algorithms.";
 const PLAYLIST_TEXT = "Every Monday and Friday Spotify will release a custom playlist for all of their users with 30 curated songs for you to listen to. I honestly look"
                       + " forward to when my new playlists come out and I always make it a point to listen to all of the songs in them. My music listening has gotten to the"
                       + " point where I need even more new music to listen to, so I decided to give myself a custom playlist everyday. I set up a Node.js server running"
@@ -152,10 +121,10 @@ class HomePage2 extends Component {
                   <div style={{padding: '0', margin: '0'}}><p style={{fontSize: '3rem', margin: '0'}}>Software Engineering @ University of Waterloo</p></div>
                 </Row>
                 <Row className="centeredRow">
-                  <div style={{padding: '0', margin: '0'}}><p style={{fontSize: '2rem'}}>ethan.zohar@uwaterloo.ca | 647-980-2177</p></div>
+                  <div style={{padding: '0', margin: '0'}}><p style={{fontSize: '1vw'}}>ethan.zohar@uwaterloo.ca | 647-980-2177</p></div>
                 </Row>
                 <Row style={{ width: '100%', margin: '5% 2%', textAlign: 'center' }}>
-                  <p style={{ fontSize: '2rem'}}>{INTRO_TEXT}</p>
+                  <p style={{ fontSize: '1vw'}}>{INTRO_TEXT}</p>
                 </Row>
               </Col>
               <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right', position: 'relative', height: '100vh'}}>
@@ -179,7 +148,7 @@ class HomePage2 extends Component {
               </Col>
             </Row>
             <Row id="Education" style={{width: '100%', margin: '0', height: 'max-content'}}>
-              <Col style={{width: '55%', margin: '0', display: 'inline-block'}}>
+              <Col style={{width: '59%', margin: '0 1% 0 0', display: 'inline-block'}}>
                 <Row style={{ margin: '0' }}><div className="shadow" style={{ marginLeft: '2%' }}><p>Education</p></div></Row>
                 <Row style={{ margin: '0' }}>
                   <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '2.5vw' }}>University of Waterloo</p></div>
@@ -191,54 +160,62 @@ class HomePage2 extends Component {
                   <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '1vw' }} className="smallShadow">September 2018 - April 2023</p></div>
                 </Row>
                 <Row style={{ margin: '10px 0 0 0 ' }}>
-                  <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>{EDUCATION_TEXT}</p>
+                  <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>{EDUCATION_TEXT}</p>
                 </Row>
                 <Row style={{ margin: '0 0 10px 0' }}>
                   <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '2.5vw' }}>Highlighted Courses</p></div>
                 </Row>
                 <Row style={{ margin: '0' }}>
                   <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'left'}}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 105 | Fundamentals of Programming | 100%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 108 | Discrete Mathematics and Logic 1 | 94%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 124 | Digital Circuits  and Systems | 87%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 104 | Linear Circuits | 86%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 241 | Foundations of Sequential Programs | 91%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 245 | Logic and Computation | 86%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>ECE 105 | Fundamentals of Programming | 100%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>ECE 108 | Discrete Mathematics and Logic 1 | 94%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>ECE 124 | Digital Circuits  and Systems | 87%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>ECE 104 | Linear Circuits | 86%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>CS 241 | Foundations of Sequential Programs | 91%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>CS 245 | Logic and Computation | 86%</p>
                   </Col>
                   <Col style={{width: '50%', margin: '0', display: 'inline-block'}}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>ECE 222 | Digital Computers | 89%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 240 | Data Structures and Data Management | 79%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 247 | Software Engineering Principles | 83%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>CS 348 | Intro. to Database Management | 97%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>MATH 239 | Intro. to Combinatorics | 80%</p>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>STAT 231 | Statistics | 83%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>ECE 222 | Digital Computers | 89%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>CS 240 | Data Structures and Data Management | 79%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>CS 247 | Software Engineering Principles | 83%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>CS 348 | Intro. to Database Management | 97%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>MATH 239 | Intro. to Combinatorics | 80%</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>STAT 231 | Statistics | 83%</p>
                   </Col>
                 </Row>
               </Col>
-              <Col style={{width: '45%', margin: '0', display: 'inline-block', float: 'right'}}>
-              <Document
-                file={transcript}
-                onLoadSuccess={this.onDocumentLoadSuccess}
-              >
-                <Page scale="1.17" pageNumber={this.state.pageNumber} />
-              <div className="page-controls">
-                <button
-                  type="button"
-                  disabled={this.state.pageNumber <= 1}
-                  onClick={this.previousPage}
+              <Col style={{width: '40%', margin: '0', display: 'inline-block', float: 'right'}}>
+                <Document
+                  file={transcript}
+                  onLoadSuccess={this.onDocumentLoadSuccess}
                 >
-                  {'<'}
-                </button>
-                <span>{`${this.state.pageNumber} of ${this.state.numPages}`}</span>
-                <button
-                  type="button"
-                  disabled={this.state.pageNumber >= this.state.numPages}
-                  onClick={this.nextPage}
-                >
-                {'>'}
-                </button>
-              </div>
-              </Document>
+                  <Page scale="1.17" pageNumber={this.state.pageNumber} />
+                  <div className="page-controls" style={{ height: 'max-content', top: '0', left: '95%', backgroundColor: 'transparent', boxShadow: 'none'}}>
+                    <a className="cancelATag" href={transcript} without rel="noopener noreferrer" target="_blank">
+                      <svg width="0.75em" height="0.75em" viewBox="0 0 16 16" class="bi bi-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                      </svg>
+                    </a>
+                  </div>
+                <div className="page-controls">
+                  <button
+                    type="button"
+                    disabled={this.state.pageNumber <= 1}
+                    onClick={this.previousPage}
+                  >
+                    {'<'}
+                  </button>
+                  <span>{`${this.state.pageNumber} of ${this.state.numPages}`}</span>
+                  <button
+                    type="button"
+                    disabled={this.state.pageNumber >= this.state.numPages}
+                    onClick={this.nextPage}
+                  >
+                  {'>'}
+                  </button>
+                </div>
+                </Document>
               </Col>
             </Row>
             <Row id="TechSkills" style={{width: '100%', margin: '0', height: 'max-content'}}>
@@ -250,59 +227,54 @@ class HomePage2 extends Component {
               <Col style={{width: '60%', margin: '0', display: 'inline-block', float: 'right', padding: '0 2%'}}>
                 <Row style={{ margin: '0' }}><div className="shadow" style={{ width: '100%' }}><p style={{ textAlign: 'right'  }}>Technical Skills</p></div></Row>
                 <Row style={{ margin: '0'}}>
-                  <p style={{ fontSize: '2rem', marginRight: '2%'}}>{TECHNICAL_SKILLS_TEXT}</p>
+                  <p style={{ fontSize: '1vw', marginRight: '2%'}}>{TECHNICAL_SKILLS_TEXT}</p>
                 </Row>
                 <Row style={{ margin: '0 0 10px 0' }}>
                   <div className="shadow" style={{ width: '100%'}}><p style={{ fontSize: '2.5vw', textAlign: 'right'  }}>Languages, Tools, and Frameworks</p></div>
                 </Row>
                 <Row style={{margin: '0', width: '100%'}}>
                   <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
-                    <p style={{ fontSize: '2rem'}}>- Java</p>
-                    <p style={{ fontSize: '2rem'}}>- C++</p>
-                    <p style={{ fontSize: '2rem'}}>- Python</p>
-                    <p style={{ fontSize: '2rem'}}>- JavaScript</p>
-                    <p style={{ fontSize: '2rem'}}>- WebRTC</p>
+                    <p style={{ fontSize: '1vw'}}>- Java</p>
+                    <p style={{ fontSize: '1vw'}}>- C++</p>
+                    <p style={{ fontSize: '1vw'}}>- Python</p>
+                    <p style={{ fontSize: '1vw'}}>- JavaScript</p>
+                    <p style={{ fontSize: '1vw'}}>- WebRTC</p>
                   </Col>
                   <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
-                    <p style={{ fontSize: '2rem'}}>- Bash</p>
-                    <p style={{ fontSize: '2rem'}}>- Github</p>
-                    <p style={{ fontSize: '2rem'}}>- AWS</p>
-                    <p style={{ fontSize: '2rem'}}>- Azure</p>
-                    <p style={{ fontSize: '2rem'}}>- JDBC</p>
+                    <p style={{ fontSize: '1vw'}}>- Bash</p>
+                    <p style={{ fontSize: '1vw'}}>- Github</p>
+                    <p style={{ fontSize: '1vw'}}>- AWS</p>
+                    <p style={{ fontSize: '1vw'}}>- Azure</p>
+                    <p style={{ fontSize: '1vw'}}>- JDBC</p>
                   </Col>
                   <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
-                    <p style={{ fontSize: '2rem'}}>- Apache Flink</p>
-                    <p style={{ fontSize: '2rem'}}>- Springboot/Spring</p>
-                    <p style={{ fontSize: '2rem'}}>- Node.js</p>
-                    <p style={{ fontSize: '2rem'}}>- React</p>
-                    <p style={{ fontSize: '2rem'}}>- Docker</p>
+                    <p style={{ fontSize: '1vw'}}>- Apache Flink</p>
+                    <p style={{ fontSize: '1vw'}}>- Springboot/Spring</p>
+                    <p style={{ fontSize: '1vw'}}>- Node.js</p>
+                    <p style={{ fontSize: '1vw'}}>- React</p>
+                    <p style={{ fontSize: '1vw'}}>- Docker</p>
                   </Col>
                   <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
-                    <p style={{ fontSize: '2rem'}}>- Flask</p>
-                    <p style={{ fontSize: '2rem'}}>- Thymeleaf</p>
-                    <p style={{ fontSize: '2rem'}}>- PostgreSQL</p>
-                    <p style={{ fontSize: '2rem'}}>- MongoDB</p>
-                    <p style={{ fontSize: '2rem'}}>- HTML</p>
+                    <p style={{ fontSize: '1vw'}}>- Flask</p>
+                    <p style={{ fontSize: '1vw'}}>- Thymeleaf</p>
+                    <p style={{ fontSize: '1vw'}}>- PostgreSQL</p>
+                    <p style={{ fontSize: '1vw'}}>- MongoDB</p>
+                    <p style={{ fontSize: '1vw'}}>- HTML</p>
                   </Col>
                   <Col style={{width: 'max-content', margin: '0 1%', display: 'inline-block', float: 'right'}}>
-                    <p style={{ fontSize: '2rem'}}>- MySQL</p>
-                    <p style={{ fontSize: '2rem'}}>- Firebase</p>
-                    <p style={{ fontSize: '2rem'}}>- REST</p>
-                    <p style={{ fontSize: '2rem'}}>- Socket Connections</p>
-                    <p style={{ fontSize: '2rem'}}>- CSS/SCSS</p>
+                    <p style={{ fontSize: '1vw'}}>- MySQL</p>
+                    <p style={{ fontSize: '1vw'}}>- Firebase</p>
+                    <p style={{ fontSize: '1vw'}}>- REST</p>
+                    <p style={{ fontSize: '1vw'}}>- Socket Connections</p>
+                    <p style={{ fontSize: '1vw'}}>- CSS/SCSS</p>
                   </Col>
                 </Row>
               </Col>
             </Row>
             <Row id="IndExp" style={{width: '100%', margin: '0', height: 'max-content'}}>
-              <Col style={{width: '60%', margin: '0', display: 'inline-block'}}>
+              <Col style={{width: '59%', margin: '0 1% 0 0', display: 'inline-block'}}>
                 <Row style={{ margin: '0' }}><div className="shadow" style={{ marginLeft: '2%' }}><p>Industry Experience</p></div></Row>
-                <Row style={{ margin: '0' }}>
-                  <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>
-                  Being in Software Engineering at UWaterloo, I am given 6 co-op opportunities, each being 4 months in lenght. This means that I will graduate school already having 2 full years of industry experience under my belt. At this point in my career, I already have over a full year of industry experience.
-                  </p>
-                </Row>
-                <Row style={{ margin: '2% 0 0 1%' }}>
+                <Row style={{ margin: '0 0 0 1%' }}>
                   <Row style={{ marginBottom: '1%' }}>
                     <Col>
                     <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>D2L</p></div>
@@ -315,10 +287,10 @@ class HomePage2 extends Component {
                     </Col>
                   </Row>
                   <Row style={{ margin: '0' }}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>{D2L_TEXT}</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>{D2L_TEXT}</p>
                   </Row>
                 </Row>
-                <Row style={{ margin: '2% 0 0 1%' }}>
+                <Row style={{ margin: '1% 0 0 1%' }}>
                   <Row style={{ marginBottom: '1%' }}>
                     <Col>
                     <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Mindbridge Ai</p></div>
@@ -331,10 +303,10 @@ class HomePage2 extends Component {
                     </Col>
                   </Row>
                   <Row style={{ margin: '0' }}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>{MINDBRIDGE_TEXT_2}</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>{MINDBRIDGE_TEXT_2}</p>
                   </Row>
                 </Row>
-                <Row style={{ margin: '2% 0 0 1%' }}>
+                <Row style={{ margin: '1% 0 0 1%' }}>
                   <Row style={{ marginBottom: '1%' }}>
                     <Col>
                     <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Mindbridge Ai</p></div>
@@ -347,10 +319,10 @@ class HomePage2 extends Component {
                     </Col>
                   </Row>
                   <Row style={{ margin: '0' }}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>{MINDBRIDGE_TEXT_1}</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>{MINDBRIDGE_TEXT_1}</p>
                   </Row>
                 </Row>
-                <Row style={{ margin: '2% 0 0 1%' }}>
+                <Row style={{ margin: '1% 0 0 1%' }}>
                   <Row style={{ marginBottom: '1%' }}>
                     <Col>
                     <div className="shadow" style={{ marginLeft: '2%', marginRight: '0' }}><p style={{ fontSize: '3vw' }}>Plastic Mobile</p></div>
@@ -363,13 +335,21 @@ class HomePage2 extends Component {
                     </Col>
                   </Row>
                   <Row style={{ margin: '0' }}>
-                    <p style={{ fontSize: '2rem', color: 'white', marginLeft: '2%'}}>{PLASTIC_MOBILE_TEXT}</p>
+                    <p style={{ fontSize: '1vw', color: 'white', marginLeft: '2%'}}>{PLASTIC_MOBILE_TEXT}</p>
                   </Row>
                 </Row>
               </Col>
               <Col style={{width: '40%', margin: '0', display: 'inline-block', float: 'right'}}>
               <Document file={resume}>
                 <Page scale="1.17" pageNumber={1} />
+                  <div className="page-controls" style={{ height: 'max-content', top: '0', left: '95%', backgroundColor: 'transparent', boxShadow: 'none'}}>
+                    <a className="cancelATag" href={resume} without rel="noopener noreferrer" target="_blank">
+                      <svg width="0.75em" height="0.75em" viewBox="0 0 16 16" class="bi bi-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                      </svg>
+                    </a>
+                  </div>
               </Document>
               </Col>
             </Row>
@@ -379,7 +359,7 @@ class HomePage2 extends Component {
                   <div className="shadow"><p>Personal Projects</p></div>
                 </Row>
                   <Row style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
-                    <p style={{ fontSize: '2rem'}}>Learning how to code has forced me to look at the world through a new lense. I actively analyses the problems in my life and seek to solve them, and by solve them I of course mean solve them with code. If the tool that I am looking for does not exist, I just go and create it myself. So here are some of the problems that I have solved in my life!
+                    <p style={{ fontSize: '1vw'}}>Learning how to code has forced me to look at the world through a new lense. I actively analyses the problems in my life and seek to solve them, and by solve them I of course mean solve them with code. If the tool that I am looking for does not exist, I just go and create it myself. So here are some of the problems that I have solved in my life!
                     <br/>
                     Click on the project headers to be taken to the code or the deployed application.</p>
                   </Row>
@@ -390,11 +370,16 @@ class HomePage2 extends Component {
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/ethanzohar/spotify-playlist-generator" className="cancelATag" target="_blank">github.com/ethanzohar/spotify-playlist-generator</a> | October 2020</p>
+                      <a href="https://github.com/ethanzohar/spotify-playlist-generator" className="cancelATag" target="_blank">github.com/ethanzohar/spotify-playlist-generator</a></p>
+                    </div>
+                  </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">October 2020</p>
                     </div>
                   </Row>
                   <Row style={{ width: '90%', margin: '1% auto 0 auto', textAlign: 'center' }}>
-                    <p style={{ fontSize: '2rem'}}>{PLAYLIST_TEXT}</p>
+                    <p style={{ fontSize: '1vw'}}>{PLAYLIST_TEXT}</p>
                   </Row>
                 </Row>
                 <Row style={{width: '100%', margin: '2% 0 0 0'}}>
@@ -404,7 +389,12 @@ class HomePage2 extends Component {
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/ethanzohar/Viber" className="cancelATag" target="_blank">github.com/ethanzohar/Viber</a> | April 2020 - May 2020</p>
+                      <a href="https://github.com/ethanzohar/Viber" className="cancelATag" target="_blank">github.com/ethanzohar/Viber</a></p>
+                    </div>
+                  </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">April 2020 - May 2020</p>
                     </div>
                   </Row>
                   <Row style={{width: '100%', margin: '1% 0'}}>
@@ -412,12 +402,18 @@ class HomePage2 extends Component {
                     <img src={viberListen} style={{ marginRight: '1%', marginLeft: '0.5%' }} alt="Viber listener view" width='48.5%' />
                   </Row>
                   <Row style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
-                    <p style={{ fontSize: '2rem'}}>{VIBER_TEXT}</p>
+                    <p style={{ fontSize: '1vw'}}>{VIBER_TEXT}</p>
                   </Row>
                 </Row>
                 <Row style={{width: '100%', margin: '2% 0 0 0'}}>
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://whiteboards.tech" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Whiteboards.tech</p></a></div>
+                  </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">
+                      <a href="https://github.com/TOHacks-Dev/whiteboard" className="cancelATag" target="_blank">github.com/TOHacks-Dev/whiteboard</a></p>
+                    </div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
@@ -428,12 +424,18 @@ class HomePage2 extends Component {
                     <img src={whiteboards} style={{ margin: '0 25.75%' }} alt="Whiteboards.tech app" width='48.5%' />
                   </Row>
                   <Row style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
-                    <p style={{ fontSize: '2rem'}}>{WHITEBOARDS_TEXT}</p>
+                    <p style={{ fontSize: '1vw'}}>{WHITEBOARDS_TEXT}</p>
                   </Row>
                 </Row>
                 <Row style={{width: '100%', margin: '2% 0 0 0'}}>
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://screenshare.pro" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Screenshare.pro</p></a></div>
+                  </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">
+                      <a href="https://github.com/Computer-Kids-Club/screenshare-web" className="cancelATag" target="_blank">github.com/Computer-Kids-Club/screenshare-web</a></p>
+                    </div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
@@ -445,7 +447,7 @@ class HomePage2 extends Component {
                     <img src={screenshareWatch} style={{ marginRight: '1%', marginLeft: '0.5%' }} alt="Screenshare.pro watcher view" width='48.5%' />
                   </Row>
                   <Row style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
-                    <p style={{ fontSize: '2rem'}}>{SCREENSHARE_TEXT}</p>
+                    <p style={{ fontSize: '1vw'}}>{SCREENSHARE_TEXT}</p>
                   </Row>
                 </Row>
                 <Row style={{width: '100%', margin: '2% 0 0 0'}}>
@@ -455,11 +457,16 @@ class HomePage2 extends Component {
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" target="_blank">github.com/Computer-Kids-Club/pokeman</a> | April 2018 - May 2018</p>
+                      <a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" target="_blank">github.com/Computer-Kids-Club/pokeman</a></p>
+                    </div>
+                  </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">April 2018 - May 2018</p>
                     </div>
                   </Row>
                   <Row style={{ width: '90%', margin: '1% auto 0 auto', textAlign: 'center' }}>
-                    <p style={{ fontSize: '2rem'}}>{POKEMON_TEXT}</p>
+                    <p style={{ fontSize: '1vw'}}>{POKEMON_TEXT}</p>
                   </Row>
                 </Row>
               </Col>
