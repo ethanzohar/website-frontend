@@ -128,18 +128,26 @@ class HomePage2 extends Component {
                 </Row>
               </Col>
               <Col style={{width: '50%', margin: '0', display: 'inline-block', float: 'right', position: 'relative', height: '100vh'}}>
-                <div className="shadow shadowHover" style={{ top: '5.25vh', right: '0px', position: 'absolute' }}>
-                  <a href="#Education" className="cancelATag"><p>Education</p></a>
-                </div>
-                <div className="shadow shadowHover" style={{ top: '19.97vh', right: '0px', position: 'absolute' }}>
-                  <a href="#TechSkills" className="cancelATag"><p>Technical Skills</p></a>
-                </div>
-                <div className="shadow shadowHover" style={{ top: '34.69vh', right: '0px', position: 'absolute' }}>
-                  <a href="#IndExp" className="cancelATag"><p>Industry Experience</p></a>
-                </div>
-                <div className="shadow shadowHover" style={{ top: '49.41vh', right: '0px', position: 'absolute' }}>
-                  <a href="#PerProj" className="cancelATag"><p>Personal Projects</p></a>
-                </div>
+                <a href="#Education" className="cancelATag">
+                  <div className="shadow shadowHover" style={{ top: '5.25vh', right: '0px', position: 'absolute' }}>
+                    <p>Education</p>
+                  </div>
+                </a>
+                <a href="#TechSkills" className="cancelATag">
+                  <div className="shadow shadowHover" style={{ top: '19.97vh', right: '0px', position: 'absolute' }}>
+                  <p>Technical Skills</p>
+                  </div>
+                </a>
+                <a href="#IndExp" className="cancelATag">
+                  <div className="shadow shadowHover" style={{ top: '34.69vh', right: '0px', position: 'absolute' }}>
+                    <p>Industry Experience</p>
+                  </div>
+                </a>
+                <a href="#PerProj" className="cancelATag">
+                  <div className="shadow shadowHover" style={{ top: '49.41vh', right: '0px', position: 'absolute' }}>
+                    <p>Personal Projects</p>
+                  </div>
+                </a>
                 <div className="iconRow">
                   <a href="https://github.com/ethanzohar" target="_blank"><img src={github} /></a>
                   <a href="https://linkedin.com/in/ethan-zohar" target="_blank"><img src={linkedin} style={{ margin: '0 1%'}} /></a>
