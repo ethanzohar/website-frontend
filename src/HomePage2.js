@@ -373,12 +373,12 @@ class HomePage2 extends Component {
                   </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://github.com/ethanzohar/spotify-playlist-generator" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Spotify Playlist Generator</p></a></div>
+                    <div className="shadow"><a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Discover Daily</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/ethanzohar/spotify-playlist-generator" className="cancelATag" target="_blank">github.com/ethanzohar/spotify-playlist-generator</a></p>
+                      <a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" target="_blank">github.com/ethanzohar/discover-daily</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
