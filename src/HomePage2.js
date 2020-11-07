@@ -382,7 +382,7 @@ class HomePage2 extends Component {
                     <p style={{ fontSize: '1vw'}}>{PLAYLIST_TEXT}</p>
                   </Row>
                 </Row>
-                <Row style={{width: '100%', margin: '2% 0 0 0'}}>
+                <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://github.com/ethanzohar/Viber" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Viber</p></a></div>
                   </Row>
@@ -405,7 +405,7 @@ class HomePage2 extends Component {
                     <p style={{ fontSize: '1vw'}}>{VIBER_TEXT}</p>
                   </Row>
                 </Row>
-                <Row style={{width: '100%', margin: '2% 0 0 0'}}>
+                <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://whiteboards.tech" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Whiteboards.tech</p></a></div>
                   </Row>
@@ -427,7 +427,7 @@ class HomePage2 extends Component {
                     <p style={{ fontSize: '1vw'}}>{WHITEBOARDS_TEXT}</p>
                   </Row>
                 </Row>
-                <Row style={{width: '100%', margin: '2% 0 0 0'}}>
+                <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://screenshare.pro" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Screenshare.pro</p></a></div>
                   </Row>
@@ -450,7 +450,7 @@ class HomePage2 extends Component {
                     <p style={{ fontSize: '1vw'}}>{SCREENSHARE_TEXT}</p>
                   </Row>
                 </Row>
-                <Row style={{width: '100%', margin: '2% 0 0 0'}}>
+                <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
                     <div className="shadow"><a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Pokémon Online Battle Simulator</p></a></div>
                   </Row>
