@@ -68,5 +68,4 @@ class SpotifyHelper {
     return response.json();
   }
 }
-
-module.exports = SpotifyHelper;
+export default SpotifyHelper;

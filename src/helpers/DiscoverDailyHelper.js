@@ -19,4 +19,4 @@ class DiscoverDailyHelper {
   }
 }
 
-module.exports = DiscoverDailyHelper;
+export default DiscoverDailyHelper;
