@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 
 const stateKey = 'spotify_auth_state';
 const paramsKey = "spotify_auth_params";
@@ -7,10 +7,6 @@ const userInfoKey = "spotify_user_info";
 const pageKey = 'spotify_page_key';
 
 class SpotifyLoginRedirect extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     const params = getHashParams();
     console.log(params);
@@ -74,7 +70,8 @@ function getHashParams() {
   var hashParams = {};
   var e, r = /([^&;=]+)=?([^&;]*)/g,
       q = window.location.hash.substring(1);
-  while ( e = r.exec(q)) {
+  // eslint-disable-next-line no-cond-assign
+  while (e = r.exec(q)) {
       hashParams[e[1]] = decodeURIComponent(e[2]);
   }
   return hashParams;

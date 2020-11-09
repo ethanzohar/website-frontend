@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import '../App.css';
 
 const Spotify = () => {
 
@@ -37,6 +37,9 @@ const Spotify = () => {
         console.log("The request to get user location timed out.");
         break;
       case error.UNKNOWN_ERROR:
+        console.log("An unknown error occurred.");
+        break;
+      default:
         console.log("An unknown error occurred.");
         break;
     }

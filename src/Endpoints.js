@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
 const Endpoints = () => {
 
-  const [json, setJson] = React.useState({})
+  // const [json, setJson] = React.useState({})
+  const json = {};
   // REACT HOOKS 
 
   const putHandler = async () => {
@@ -20,14 +21,14 @@ const Endpoints = () => {
     })
   }
 
-  const getHandler = async () => {
-    const response = await fetch('http://localhost:8080/endpoints', {'Accepts': 'application/json'})
-    if (response && response.ok && response.body) {
-      setJson(await response.json());
-    } else {
-      console.log("DUMB");
-    }
-  }
+  // const getHandler = async () => {
+  //   const response = await fetch('http://localhost:8080/endpoints', {'Accepts': 'application/json'})
+  //   if (response && response.ok && response.body) {
+  //     setJson(await response.json());
+  //   } else {
+  //     console.log("DUMB");
+  //   }
+  // }
   
   return (
     <div className="Endpoints">

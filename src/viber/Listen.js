@@ -1,8 +1,7 @@
 import GoogleMapReact from 'google-map-react';
 import React, { Component } from 'react';
-import './App.css';
-import { GOOGLE_API_KEY } from './keys';
-import { render } from '@testing-library/react';
+import '../App.css';
+import { GOOGLE_API_KEY } from '../keys';
 
 const paramsKey = "spotify_auth_params";
 const userInfoKey = "spotify_user_info";
@@ -33,7 +32,7 @@ class Listen extends Component {
       get().then((result) => {
         s.update(result);
 
-        if (s.selectedStreamer != {}) {
+        if (s.selectedStreamer !== {}) {
           me.selectedStreamer = allStreamers[me.selectedStreamer.id];
           putHandler(s.selectedStreamer);
         }

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component  } from 'react';
 import { pdfjs, Document, Page } from "react-pdf";
 import headerImage1 from './images/headerImage1.jpg';
@@ -149,9 +150,9 @@ class HomePage2 extends Component {
                   </div>
                 </a>
                 <div className="iconRow">
-                  <a href="https://github.com/ethanzohar" target="_blank"><img src={github} /></a>
-                  <a href="https://linkedin.com/in/ethan-zohar" target="_blank"><img src={linkedin} style={{ margin: '0 1%'}} /></a>
-                  <a href="https://www.instagram.com/ethan_zohar/" target="_blank"><img src={instagram} /></a>
+                  <a href="https://github.com/ethanzohar" without rel="noopener noreferrer" target="_blank"><img src={github} /></a>
+                  <a href="https://linkedin.com/in/ethan-zohar" without rel="noopener noreferrer" target="_blank"><img src={linkedin} style={{ margin: '0 1%'}} /></a>
+                  <a href="https://www.instagram.com/ethan_zohar/" without rel="noopener noreferrer" target="_blank"><img src={instagram} /></a>
                 </div>
               </Col>
             </Row>
@@ -373,12 +374,12 @@ class HomePage2 extends Component {
                   </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Discover Daily</p></a></div>
+                    <div className="shadow"><a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Discover Daily</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" target="_blank">github.com/ethanzohar/discover-daily</a></p>
+                      <a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/ethanzohar/discover-daily</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
@@ -392,12 +393,12 @@ class HomePage2 extends Component {
                 </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://github.com/ethanzohar/Viber" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Viber</p></a></div>
+                    <div className="shadow"><a href="https://github.com/ethanzohar/Viber" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Viber</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/ethanzohar/Viber" className="cancelATag" target="_blank">github.com/ethanzohar/Viber</a></p>
+                      <a href="https://github.com/ethanzohar/Viber" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/ethanzohar/Viber</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
@@ -415,12 +416,12 @@ class HomePage2 extends Component {
                 </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://whiteboards.tech" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Whiteboards.tech</p></a></div>
+                    <div className="shadow"><a href="https://whiteboards.tech" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Whiteboards.tech</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/TOHacks-Dev/whiteboard" className="cancelATag" target="_blank">github.com/TOHacks-Dev/whiteboard</a></p>
+                      <a href="https://github.com/TOHacks-Dev/whiteboard" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/TOHacks-Dev/whiteboard</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
@@ -437,12 +438,12 @@ class HomePage2 extends Component {
                 </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://screenshare.pro" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Screenshare.pro</p></a></div>
+                    <div className="shadow"><a href="https://screenshare.pro" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Screenshare.pro</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/Computer-Kids-Club/screenshare-web" className="cancelATag" target="_blank">github.com/Computer-Kids-Club/screenshare-web</a></p>
+                      <a href="https://github.com/Computer-Kids-Club/screenshare-web" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/Computer-Kids-Club/screenshare-web</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
@@ -460,12 +461,12 @@ class HomePage2 extends Component {
                 </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" target="_blank"><p style={{ fontSize: '3vw' }}>Pokémon Online Battle Simulator</p></a></div>
+                    <div className="shadow"><a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Pokémon Online Battle Simulator</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" target="_blank">github.com/Computer-Kids-Club/pokeman</a></p>
+                      <a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/Computer-Kids-Club/pokeman</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">

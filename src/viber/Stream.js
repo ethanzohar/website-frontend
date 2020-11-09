@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import unknownAlbum from './images/unknown_album.jpg';
-import './App.css';
+import unknownAlbum from '../images/unknown_album.jpg';
+import '../App.css';
 
 const paramsKey = "spotify_auth_params";
 const userInfoKey = "spotify_user_info";
@@ -126,7 +126,7 @@ class Stream extends Component {
       <div className="Stream">
         <div className="MainSongInformation">
           <div className="MainAlbum">
-            <img id="main-album" className="album-cover" src={this.albumImage} width="500"></img>
+            <img id="main-album" className="album-cover" src={this.albumImage} width="500" alt="main album"></img>
           </div>
           <div className="SongInfoDiv">
             <h3 className="SongInfo" id="SongName">{this.songName}</h3>
@@ -146,21 +146,21 @@ class Stream extends Component {
   }
 }
 
-async function getPlayer(access_token) {
-  const response = await fetch('https://api.spotify.com/v1/me/player', {
-    Accepts: 'application/json',
-    method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + access_token
-    }
-  })
+// async function getPlayer(access_token) {
+//   const response = await fetch('https://api.spotify.com/v1/me/player', {
+//     Accepts: 'application/json',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Bearer ' + access_token
+//     }
+//   })
   
-  try {
-    return await response.json();
-  } catch {
-    return {};
-  }
-}
+//   try {
+//     return await response.json();
+//   } catch {
+//     return {};
+//   }
+// }
 
 async function post(currentStreamingSong, s) {
   getLocation(s);
@@ -216,6 +216,9 @@ function showError(error) {
     case error.UNKNOWN_ERROR:
       console.log("An unknown error occurred.");
       break;
+    default:
+      console.log("An unknown error occurred.");
+      break;
   }
 
   window.location = window.location.origin + "/error";
@@ -237,20 +240,20 @@ async function getCurrentSong(access_token) {
   }
 }
 
-async function getRecentSongs(access_token) {
-  const response = await fetch('https://api.spotify.com/v1/me/player/recently-played', {
-    Accepts: 'application/json',
-    method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + access_token
-    }
-  })
+// async function getRecentSongs(access_token) {
+//   const response = await fetch('https://api.spotify.com/v1/me/player/recently-played', {
+//     Accepts: 'application/json',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Bearer ' + access_token
+//     }
+//   })
   
-  try {
-    return await response.json();
-  } catch {
-    return {};
-  }
-}
+//   try {
+//     return await response.json();
+//   } catch {
+//     return {};
+//   }
+// }
 
 export default Stream;
