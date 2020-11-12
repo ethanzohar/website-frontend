@@ -10,7 +10,8 @@ import Stream from "./viber/Stream";
 import Error from "./Error";
 import SpotifyLoginRedirect from "./viber/SpotifyLoginRedirect";
 import DiscoverDaily from "./DiscoverDaily/DiscoverDaily";
-import DiscoverDailySignup from "./DiscoverDaily/DiscoverDailySignup";
+import DiscoverDailyRedirect from "./DiscoverDaily/DiscoverDailyRedirect";
+import DiscoverDailyLogin from "./DiscoverDaily/DiscoverDailyLogin";
 
 function App() {
   document.title = "Ethan Zohar"
@@ -26,7 +27,8 @@ function App() {
       <Route exact path="/spotify/listen" component={Listen}></Route>
       <Route exact path="/spotify/stream" component={Stream}></Route>
       <Route exact path="/discover-daily" component={DiscoverDaily}></Route>
-      <Route exact path="/discover-daily/signup" component={DiscoverDailySignup}></Route>
+      <Route exact path="/discover-daily/redirect" component={DiscoverDailyRedirect}></Route>
+      <Route exact path="/discover-daily/login" component={DiscoverDailyLogin}></Route>
       <Route exact path="/error" component={Error}></Route>
     </BrowserRouter>
   );

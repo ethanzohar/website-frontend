@@ -17,6 +17,17 @@ class DiscoverDailyHelper {
 
     return response.json();
   }
+
+  static async getUser(userId) {
+    const response = await fetch(`${BACKEND_URI}/api/discover-daily/getUser/${userId}`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      }
+    });
+    
+    return response.json();
+  }
 }
 
 export default DiscoverDailyHelper;
