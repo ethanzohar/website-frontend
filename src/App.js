@@ -12,6 +12,7 @@ import SpotifyLoginRedirect from "./viber/SpotifyLoginRedirect";
 import DiscoverDaily from "./DiscoverDaily/DiscoverDaily";
 import DiscoverDailyRedirect from "./DiscoverDaily/DiscoverDailyRedirect";
 import DiscoverDailyLogin from "./DiscoverDaily/DiscoverDailyLogin";
+import './fonts/Gotham.otf';
 
 function App() {
   document.title = "Ethan Zohar"

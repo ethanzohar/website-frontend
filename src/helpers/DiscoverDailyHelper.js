@@ -48,7 +48,12 @@ class DiscoverDailyHelper {
 
   static async getAlbums(refreshToken) {
     const { accessToken } = await this.getAccessToken(refreshToken); 
-    const response = await fetch(`https://api.spotify.com/v1/me/tracks?limit=50`, {
+
+    let albums = [];
+    let next = `https://api.spotify.com/v1/me/tracks?limit=50`;
+
+    for (let i = 0; i < 10; i += 1) {
+    const response = await fetch(next, {
       Accepts: 'application/json',
             method: 'GET',
             headers: {
@@ -57,9 +62,15 @@ class DiscoverDailyHelper {
     });
 
     const j = await response.json();
-    console.log(j)
-    const albums = j.items.map((x) => x.track.album.images[0].url);
-    return albums;
+    j.items.forEach((x) => {
+      albums.push(x.track.album.images[0].url);
+    })
+
+    next = j.next;
+  }
+
+    // const albums = j.items.map((x) => x.track.album.images[0].url);
+    return [...new Set(albums)];
   }
 
   static async getAccessToken(refreshToken) {
