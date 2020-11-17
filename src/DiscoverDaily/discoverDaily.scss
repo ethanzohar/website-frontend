@@ -1,6 +1,7 @@
 $discoverDailyDark: rgba(174, 90, 109, 1);
 $discoverDailyLight: white;
 $discoverDailyPercentage: 25%;
+$imageHeight: 20vh;
 
 .DiscoverDailyMain {
     background-color: white;
@@ -26,7 +27,7 @@ $discoverDailyPercentage: 25%;
 
 .discoverDailyLeftColumn {
     min-height: 100vh;
-    width: auto;
+    width: calc(100vw - calc(#{$imageHeight})*4);
     margin: 0;
     display: inline-block;
     vertical-align: middle;
@@ -51,6 +52,16 @@ $discoverDailyPercentage: 25%;
     border-radius: 100px;
     font-size: 3rem;
     margin: 0;
+}
+
+.imageCol {
+    width: $imageHeight;
+    height: $imageHeight;
+    float: right;
+
+    img {
+        width: $imageHeight;
+    }
 }
 
 @media only screen and (max-width: 768px) {

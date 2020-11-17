@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import CircularProgress from '@material-ui/core/CircularProgress'
 import SpotifyHelper from '../helpers/SpotifyHelper';
 import DiscoverDailyHelper from '../helpers/DiscoverDailyHelper';
 import { images } from './images';
 
 import './discoverDaily.scss';
 
+const imageHeight = '20vh';
 class DiscoverDaily extends Component {
   constructor(props) {
     super(props)
+    
     this.state = {
       user: null,
       spotifyUser: null,
-      refreshToken: null
+      refreshToken: null,
+      loading: true,
+      imageIndexes: new Set()
+    }
+
+    while (this.state.imageIndexes.size < 20) {
+      const randomNum = Math.floor(Math.random() * images.length);
+      if (!this.state.imageIndexes.has(randomNum)){
+        this.state.imageIndexes.add(randomNum);
+      }
     }
 
     this.signupUser = this.signupUser.bind(this);
@@ -40,6 +52,7 @@ class DiscoverDaily extends Component {
         const user = await DiscoverDailyHelper.getUser(spotifyUser.id);
         if (user.userId) this.setState({ user });
 
+        this.setState({ loading: false });
         return;
       }
     }
@@ -52,7 +65,7 @@ class DiscoverDaily extends Component {
       
       const spotifyUser = await SpotifyHelper.getUserInfo(access_token);
       const user = await DiscoverDailyHelper.getUser(spotifyUser.id);
-      this.setState({ user, spotifyUser, refreshToken: refresh_token });
+      this.setState({ user, spotifyUser, refreshToken: refresh_token, loading: false });
 
       if (user) await DiscoverDailyHelper.signupUser(spotifyUser, refresh_token);
       return;
@@ -93,44 +106,53 @@ class DiscoverDaily extends Component {
   }
 
   render() {
+    let leftColumnRow;
+    if (this.state.loading) {
+      leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
+                        <div style={{ width: 'max-content', margin: '0 auto' }}>
+                          <CircularProgress style={{width: '10vw', height: '10vw'}}/>
+                        </div>
+                      </Row>;
+    } else if (this.state.user) {
+      leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
+                        <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
+                        <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
+                        <h3 style={{ margin: '1.75% 0' }}>Your next curated playlist is on its way and will be ready tomorrow morning!</h3>
+                        <h3 style={{ margin: '1.75% 0' }}>If you don't want to get a daily playlist anymore you can click the button below to unsubscribe.</h3>
+                        <button style={{ marginTop: '1%' }}  className="btn btn-primary spotify-button" onClick={this.unsubscribeUser}>Unsubscribe</button>
+                      </Row>;
+    } else {
+      leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
+                        <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
+                        <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
+                        <h3 style={{ margin: '1.75% 0' }}>Click the button below to get a daily playlist with 30 songs that we've curated for you based on your listening history.</h3>
+                        <button style={{ marginTop: '1%' }} className="btn btn-primary spotify-button" onClick={this.signupUser}>Get your daily playlist</button>
+                      </Row>;
+    }
+    const imageIndexes = [...this.state.imageIndexes];
+
     return (
       <div className="DiscoverDailyMain">
         <Row style={{width: '100%', margin: '0'}}>
           <Col style={{width: '100%', margin: '0'}}>
             <Col className="discoverDailyLeftColumn">
-              {this.state.user ? (
-                <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
-                  <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
-                  <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
-                  <h3 style={{ margin: '1.75% 0' }}>Your next curated playlist is on its way and will be ready tomorrow morning!</h3>
-                  <h3 style={{ margin: '1.75% 0' }}>If you don't want to get a daily playlist anymore you can click the button below to unsubscribe.</h3>
-                  <button style={{ marginTop: '1%' }}  className="btn btn-primary spotify-button" onClick={this.unsubscribeUser}>Unsubscribe</button>
-                </Row>
-              ) : (
-                <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
-                  <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
-                  <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
-                  <h3 style={{ margin: '1.75% 0' }}>Click the button below to get a daily playlist with 30 songs that we've curated for you based on your listening history.</h3>
-                  <button style={{ marginTop: '1%' }} className="btn btn-primary spotify-button" onClick={this.signupUser}>Get your daily playlist</button>
-                </Row>
-              )}
-              
+              {leftColumnRow}
               {/* <button className="btn btn-primary spotify-button" onClick={this.getCovers}>GET COVERS</button> */}
             </Col>
             <Col className='discoverDailyRightColumn'>
             {[0,4,8,12,16].map((x) => (
-              <Row style={{ width: 'max-content', margin: '0', height: '20vh' }}>
-                <Col style={{ width: '20vh', height: '20vh', display: 'inline-block', float: 'right'}}>
-                  <img src={images[Math.floor(Math.random() * images.length)]} style={{ width: '20vh' }}></img>
+              <Row style={{ width: 'max-content', margin: '0', height: imageHeight }}>
+                <Col className="imageCol">
+                  <img src={images[imageIndexes[x]]} alt="albumImage"></img>
                 </Col>
-                <Col style={{ width: '20vh', height: '20vh', display: 'inline-block', float: 'right'}}>
-                  <img src={images[Math.floor(Math.random() * images.length)]} style={{ width: '20vh' }}></img>
+                <Col className="imageCol">
+                  <img src={images[imageIndexes[x+1]]} alt="albumImage"></img>
                 </Col>
-                <Col style={{ width: '20vh', height: '20vh', display: 'inline-block', float: 'right'}}>
-                  <img src={images[Math.floor(Math.random() * images.length)]} style={{ width: '20vh' }}></img>
+                <Col className="imageCol">
+                  <img src={images[imageIndexes[x+2]]} alt="albumImage"></img>
                 </Col>
-                <Col style={{ width: '20vh', height: '20vh', display: 'inline-block', float: 'right'}}>
-                  <img src={images[Math.floor(Math.random() * images.length)]} style={{ width: '20vh' }}></img>
+                <Col className="imageCol">
+                  <img src={images[imageIndexes[x+3]]} alt="albumImage"></img>
                 </Col>
               </Row>
             ))}
