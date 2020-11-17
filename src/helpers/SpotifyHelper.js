@@ -1,7 +1,7 @@
 require('dotenv').config()
 
-const CLIENT_ID = process.env.REACT_APP_SPOTIFY_API_CLIENT_ID;
-const CLIENT_SECRET = process.env.REACT_APP_SPOTIFY_API_CLIENT_SECRET;
+const CLIENT_ID = process.env.REACT_APP_DISCOVER_DAILY_API_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_DISCOVER_DAILY_API_CLIENT_SECRET;
 
 class SpotifyHelper {
   static generateRandomString(length) {
