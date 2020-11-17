@@ -102,22 +102,22 @@ class DiscoverDaily extends Component {
                 <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
                   <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
                   <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
-                  <h3 style={{ margin: '0.7% 0' }}>Your next curated playlist is on its way and will be ready tomorrow morning!</h3>
-                  <h3 style={{ margin: '0.7% 0' }}>If you don't want to get a daily playlist anymore you can click the button below to unsubscribe.</h3>
-                  <button style={{ marginTop: '3%' }}  className="btn btn-primary spotify-button" onClick={this.unsubscribeUser}>Unsubscribe</button>
+                  <h3 style={{ margin: '1.75% 0' }}>Your next curated playlist is on its way and will be ready tomorrow morning!</h3>
+                  <h3 style={{ margin: '1.75% 0' }}>If you don't want to get a daily playlist anymore you can click the button below to unsubscribe.</h3>
+                  <button style={{ marginTop: '1%' }}  className="btn btn-primary spotify-button" onClick={this.unsubscribeUser}>Unsubscribe</button>
                 </Row>
               ) : (
                 <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
                   <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
-                  <h1 style={{ margin: '0 0 3% 0' }}>but daily</h1>
-                  <h3 style={{ margin: '0.7% 0' }}>Click the button below to get a daily playlist with 30 songs that we've curated for you based on your listening history.</h3>
-                  <button style={{ marginTop: '3%' }} className="btn btn-primary spotify-button" onClick={this.signupUser}>Get your daily playlist</button>
+                  <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
+                  <h3 style={{ margin: '1.75% 0' }}>Click the button below to get a daily playlist with 30 songs that we've curated for you based on your listening history.</h3>
+                  <button style={{ marginTop: '1%' }} className="btn btn-primary spotify-button" onClick={this.signupUser}>Get your daily playlist</button>
                 </Row>
               )}
               
               {/* <button className="btn btn-primary spotify-button" onClick={this.getCovers}>GET COVERS</button> */}
             </Col>
-            <Col style={{ height: '100vh', maxWidth: '40vw', margin: '0', display: 'inline-block', float: 'right'}}>
+            <Col className='discoverDailyRightColumn'>
             {[0,4,8,12,16].map((x) => (
               <Row style={{ width: 'max-content', margin: '0', height: '20vh' }}>
                 <Col style={{ width: '20vh', height: '20vh', display: 'inline-block', float: 'right'}}>

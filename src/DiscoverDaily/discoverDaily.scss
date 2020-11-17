@@ -1,3 +1,7 @@
+$discoverDailyDark: rgba(174, 90, 109, 1);
+$discoverDailyLight: white;
+$discoverDailyPercentage: 25%;
+
 .DiscoverDailyMain {
     background-color: white;
     width: 100vw;
@@ -14,6 +18,10 @@
     h3 {
         font-size: 1vw;
     }
+
+    button {
+        font-size: 1.5vw;
+    }
 }
 
 .discoverDailyLeftColumn {
@@ -22,7 +30,14 @@
     margin: 0;
     display: inline-block;
     vertical-align: middle;
-    background-image: linear-gradient(to left, transparent, 25%, rgba(174, 90, 109, 1));
+    background-image: linear-gradient(to left, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+}
+
+.discoverDailyRightColumn {
+    height: 100vh;
+    max-width: 40vw;
+    margin: 0;
+    float: right;
 }
 
 .spotify-button {
@@ -36,4 +51,31 @@
     border-radius: 100px;
     font-size: 3rem;
     margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    
+    .discoverDailyRightColumn {
+        display: none;
+    }
+
+    .discoverDailyLeftColumn {
+        width: 100%;
+        text-align: center;
+        background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+
+        h1 {
+            font-size: 8vw;
+        }
+
+        h3 {
+            font-size: 3vw;
+        }
+
+        button {
+            font-size: 5vw;
+            float: inherit;
+        }
+    }
   }

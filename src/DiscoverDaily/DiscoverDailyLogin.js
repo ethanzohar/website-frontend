@@ -24,7 +24,7 @@ const DiscoverDailyLogin = () => {
               <button style={{ marginTop: '3%' }} className="btn btn-primary spotify-button" onClick={sendLoginRedirect}>Get your daily playlist</button>
             </Row>
           </Col>
-          <Col style={{ height: '100vh', maxWidth: '40vw', margin: '0', display: 'inline-block', float: 'right'}}>
+          <Col className='discoverDailyRightColumn'>
             {[0,4,8,12,16].map((x) => (
               <Row style={{ width: 'max-content', margin: '0', height: '20vh' }}>
                 <Col style={{ width: '20vh', height: '20vh', display: 'inline-block', float: 'right'}}>
