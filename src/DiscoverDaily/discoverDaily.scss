@@ -4,8 +4,8 @@
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    font-family: 'Gotham';
+    overflow-x: hidden;
+    font-family: Gotham;
 
     h1 {
         font-size: 4vw;
@@ -14,6 +14,15 @@
     h3 {
         font-size: 1vw;
     }
+}
+
+.discoverDailyLeftColumn {
+    min-height: 100vh;
+    width: auto;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: linear-gradient(to left, transparent, 25%, rgba(174, 90, 109, 1));
 }
 
 .spotify-button {

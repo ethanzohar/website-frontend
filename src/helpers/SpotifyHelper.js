@@ -15,7 +15,7 @@ class SpotifyHelper {
   }
 
   static getOAuthCodeUrl(redirect_uri) {
-    let scope = 'user-read-private user-top-read user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing streaming app-remote-control user-library-modify user-library-read user-read-playback-position user-read-recently-played playlist-read-collaborative playlist-modify-private playlist-read-private playlist-modify-public';
+    let scope = 'ugc-image-upload user-read-private user-top-read user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing streaming app-remote-control user-library-modify user-library-read user-read-playback-position user-read-recently-played playlist-read-collaborative playlist-modify-private playlist-read-private playlist-modify-public';
 
     let url = 'https://accounts.spotify.com/authorize';
     url += '?response_type=code';

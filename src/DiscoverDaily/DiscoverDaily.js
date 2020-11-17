@@ -97,11 +97,11 @@ class DiscoverDaily extends Component {
       <div className="DiscoverDailyMain">
         <Row style={{width: '100%', margin: '0'}}>
           <Col style={{width: '100%', margin: '0'}}>
-            <Col style={{ height: '100vh', width: '60vw', margin: '0', display: 'inline-block', verticalAlign: 'middle'}}>
+            <Col className="discoverDailyLeftColumn">
               {this.state.user ? (
                 <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
                   <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
-                  <h1 style={{ margin: '0 0 3% 0' }}>but daily</h1>
+                  <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
                   <h3 style={{ margin: '0.7% 0' }}>Your next curated playlist is on its way and will be ready tomorrow morning!</h3>
                   <h3 style={{ margin: '0.7% 0' }}>If you don't want to get a daily playlist anymore you can click the button below to unsubscribe.</h3>
                   <button style={{ marginTop: '3%' }}  className="btn btn-primary spotify-button" onClick={this.unsubscribeUser}>Unsubscribe</button>

@@ -18,7 +18,7 @@ const DiscoverDailyLogin = () => {
           <Col style={{ height: '100vh', width: '60vw', margin: '0', display: 'inline-block', verticalAlign: 'middle'}}>
             <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
               <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
-              <h1 style={{ margin: '0 0 3% 0' }}>but daily</h1>
+              <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
               <h3 style={{ margin: '0.7% 0' }}>Finding new songs that you love is hard, so let us take care of that for you!</h3>
               <h3 style={{ margin: '0.7% 0' }}>Link your Spotify account by logging in below to get access to daily music playlists curated to you.</h3>
               <button style={{ marginTop: '3%' }} className="btn btn-primary spotify-button" onClick={sendLoginRedirect}>Get your daily playlist</button>
