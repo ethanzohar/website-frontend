@@ -16,7 +16,7 @@ const DiscoverDailyLogin = () => {
       <Row style={{width: '100%', margin: '0'}}>
         <Col style={{width: '100%', margin: '0'}}>
             <Col className="discoverDailyLeftColumn">
-            <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
+            <Row style={{ width: '90%', marginLeft: '4%' }}>
               <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
               <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
               <h3>Finding new songs that you love is hard, so let us take care of that for you!</h3>
@@ -25,18 +25,18 @@ const DiscoverDailyLogin = () => {
             </Row>
           </Col>
           <Col className='discoverDailyRightColumn'>
-            {[0,4,8,12,16].map((x) => (
-              <Row className="imageRow">
-                <Col className="imageCol">
+            {[0,4,8,12].map((x, index) => (
+              <Row className={`imageRow imageRow${index}`}>
+                <Col className={`imageCol imageCol${0}`}>
                   <img src={images[Math.floor(Math.random() * images.length)]} alt="albumImage"></img>
                 </Col>
-                <Col className="imageCol">
+                <Col className={`imageCol imageCol${1}`}>
                   <img src={images[Math.floor(Math.random() * images.length)]} alt="albumImage"></img>
                 </Col>
-                <Col className="imageCol">
+                <Col className={`imageCol imageCol${2}`}>
                   <img src={images[Math.floor(Math.random() * images.length)]} alt="albumImage"></img>
                 </Col>
-                <Col className="imageCol">
+                <Col className={`imageCol imageCol${3}`}>
                   <img src={images[Math.floor(Math.random() * images.length)]} alt="albumImage"></img>
                 </Col>
               </Row>
