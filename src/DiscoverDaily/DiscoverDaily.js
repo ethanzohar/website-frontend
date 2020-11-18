@@ -19,7 +19,7 @@ class DiscoverDaily extends Component {
       imageIndexes: new Set()
     }
 
-    while (this.state.imageIndexes.size < 20) {
+    while (this.state.imageIndexes.size < 16) {
       const randomNum = Math.floor(Math.random() * images.length);
       if (!this.state.imageIndexes.has(randomNum)){
         this.state.imageIndexes.add(randomNum);
@@ -106,13 +106,13 @@ class DiscoverDaily extends Component {
   render() {
     let leftColumnRow;
     if (this.state.loading) {
-      leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
+      leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%' }}>
                         <div style={{ width: 'max-content', margin: '0 auto' }}>
                           <CircularProgress style={{width: '10vw', height: '10vw'}}/>
                         </div>
                       </Row>;
     } else if (this.state.user) {
-      leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
+      leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%' }}>
                         <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
                         <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
                         <h3>Your next curated playlist is on its way and will be ready tomorrow morning!</h3>
@@ -120,7 +120,7 @@ class DiscoverDaily extends Component {
                         <button className="btn btn-primary spotify-button" onClick={this.unsubscribeUser}>Unsubscribe</button>
                       </Row>;
     } else {
-      leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%', marginTop: '15%' }}>
+      leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%' }}>
                         <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
                         <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
                         <h3 >Click the button below to get a daily playlist with 30 songs that we've curated for you based on your listening history.</h3>
@@ -138,18 +138,18 @@ class DiscoverDaily extends Component {
               {/* <button className="btn btn-primary spotify-button" onClick={this.getCovers}>GET COVERS</button> */}
             </Col>
             <Col className='discoverDailyRightColumn'>
-            {[0,4,8,12,16].map((x) => (
-              <Row className="imageRow">
-                <Col className="imageCol">
+            {[0,4,8,12].map((x, index) => (
+              <Row className={`imageRow imageRow${index}`}>
+                <Col className={`imageCol imageCol${0}`}>
                   <img src={images[imageIndexes[x]]} alt="albumImage"></img>
                 </Col>
-                <Col className="imageCol">
+                <Col className={`imageCol imageCol${1}`}>
                   <img src={images[imageIndexes[x+1]]} alt="albumImage"></img>
                 </Col>
-                <Col className="imageCol">
+                <Col className={`imageCol imageCol${2}`}>
                   <img src={images[imageIndexes[x+2]]} alt="albumImage"></img>
                 </Col>
-                <Col className="imageCol">
+                <Col className={`imageCol imageCol${3}`}>
                   <img src={images[imageIndexes[x+3]]} alt="albumImage"></img>
                 </Col>
               </Row>

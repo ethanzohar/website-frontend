@@ -1,7 +1,6 @@
 $discoverDailyDark: rgba(174, 90, 109, 1);
 $discoverDailyLight: white;
 $discoverDailyPercentage: 25%;
-$imageHeight: 20vh;
 
 .DiscoverDailyMain {
     background-color: white;
@@ -11,6 +10,7 @@ $imageHeight: 20vh;
     padding: 0;
     overflow-x: hidden;
     font-family: Gotham;
+    background-image: linear-gradient(to left, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
 
     h1 {
         font-size: 4vw;
@@ -29,16 +29,15 @@ $imageHeight: 20vh;
 
 .discoverDailyLeftColumn {
     min-height: 100vh;
-    width: calc(100vw - calc(#{$imageHeight})*4);
+    width: calc(100vw - 100vh);
     margin: 0;
-    display: inline-block;
-    vertical-align: middle;
-    background-image: linear-gradient(to left, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+    display: flex;
+    align-items: center;
+    float: left;
 }
 
 .discoverDailyRightColumn {
     height: 100vh;
-    max-width: 40vw;
     margin: 0;
     float: right;
 }
@@ -59,30 +58,33 @@ $imageHeight: 20vh;
 .imageRow {
     width: max-content;
     margin: 0;
-    height: $imageHeight;
+    height: 25vh;
 }
 
 .imageCol {
-    width: $imageHeight;
-    height: $imageHeight;
+    width: 25vh;
+    height: 25vh;
     float: right;
 
     img {
-        width: $imageHeight;
+        width: 25vh;
     }
 }
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+
+    .DiscoverDailyMain {
+        background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+    }
     
     .discoverDailyRightColumn {
         display: none;
     }
 
     .discoverDailyLeftColumn {
-        width: 100%;
+        width: 100% !important;
         text-align: center;
-        background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
 
         h1 {
             font-size: 8vw;
@@ -98,3 +100,128 @@ $imageHeight: 20vh;
         }
     }
   }
+
+  @media only screen and (max-width: 2100px) {
+    .imageCol0 {
+        display: none;
+    }
+
+    .discoverDailyLeftColumn {
+        width: calc(100vw - 75vh);
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+    .imageCol0, .imageCol1 {
+        display: none;
+    }
+
+    .discoverDailyLeftColumn {
+        width: calc(100vw - 50vh);
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .imageCol0, .imageCol1, .imageCol2 {
+        display: none;
+    }
+
+    .discoverDailyLeftColumn {
+        width: calc(100vw - 25vh);
+
+        text-align: center;
+
+        h1 {
+            font-size: 6vw;
+        }
+
+        h3 {
+            font-size: 3vw;
+        }
+
+        button {
+            font-size: 5vw;
+            float: inherit;
+        }
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    .imageRow3, .imageCol0 {
+        display: none;
+    }
+
+    .imageRow {
+        height: 33.33vh;
+    }
+    
+    .imageCol {
+        width: 33.33vh;
+        height: 33.33vh;
+        float: right;
+    
+        img {
+            width: 33.33vh;
+        }
+    }
+
+    @media only screen and (max-width: 2100px) {
+        .imageCol1 {
+            display: none;
+        }
+    
+        .discoverDailyLeftColumn {
+            width: calc(100vw - 66.66vh);
+        }
+    }
+
+    @media only screen and (max-width: 1500px) {
+        .imageCol2 {
+            display: none;
+        }
+    
+        .discoverDailyLeftColumn {
+            width: calc(100vw - 33.33vh);
+        }
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    .imageRow3, .imageRow2, .imageCol0, .imageCol1 {
+        display: none;
+    }
+
+    .imageRow {
+        height: 50vh;
+    }
+    
+    .imageCol {
+        width: 50vh;
+        height: 50vh;
+        float: right;
+    
+        img {
+            width: 50vh;
+        }
+    }
+
+    @media only screen and (max-width: 2100px) {
+        .imageCol2 {
+            display: none;
+        }
+    
+        .discoverDailyLeftColumn {
+            width: calc(100vw - 50vh);
+        }
+    }
+
+    @media only screen and (max-width: 1500px) {
+        .imageCol2, .imageCol3 {
+            display: none;
+        }
+    
+        .discoverDailyLeftColumn {
+            width: 100vw;
+        }
+    }
+}
