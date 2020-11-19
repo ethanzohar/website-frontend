@@ -10,7 +10,8 @@ $discoverDailyPercentage: 25%;
     padding: 0;
     overflow-x: hidden;
     font-family: Gotham;
-    background-image: linear-gradient(to left, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+    // background-image: linear-gradient(to left, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+    background-color: white;
 
     h1 {
         font-size: 6rem;
@@ -75,9 +76,9 @@ $discoverDailyPercentage: 25%;
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
 
-    .DiscoverDailyMain {
-        background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
-    }
+    // .DiscoverDailyMain {
+    //     background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+    // }
     
     .discoverDailyRightColumn {
         display: none;
@@ -181,9 +182,9 @@ $discoverDailyPercentage: 25%;
 
 // 3x1 centered
 @media only screen and (max-width: 900px) and (min-height: 600px) and (max-height: 900px) {
-    .DiscoverDailyMain {
-        background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
-    }
+    // .DiscoverDailyMain {
+    //     background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+    // }
 
     .discoverDailyLeftColumn {
         text-align: center;
@@ -228,9 +229,9 @@ $discoverDailyPercentage: 25%;
 
 // 2x1 centered
 @media only screen and (max-width: 1000px) and (max-height: 600px) {
-    .DiscoverDailyMain {
-        background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
-    }
+    // .DiscoverDailyMain {
+    //     background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+    // }
 
     .discoverDailyLeftColumn {
         text-align: center;
