@@ -13,16 +13,16 @@ $discoverDailyPercentage: 25%;
     background-image: linear-gradient(to left, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
 
     h1 {
-        font-size: 4vw;
+        font-size: 6rem;
     }
 
     h3 {
-        font-size: 1vw;
+        font-size: 2rem;
         margin: 1.75% 0;
     }
 
     button {
-        font-size: 1.5vw;
+        font-size: 2.5rem;
         margin-top: 1%;
     }
 }
@@ -71,6 +71,7 @@ $discoverDailyPercentage: 25%;
     }
 }
 
+// mobile
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
 
@@ -99,9 +100,10 @@ $discoverDailyPercentage: 25%;
             float: inherit;
         }
     }
-  }
+}
 
-  @media only screen and (max-width: 2100px) {
+// 4x3
+@media only screen and (max-width: 1800px) and (min-height: 900px) {
     .imageCol0 {
         display: none;
     }
@@ -111,8 +113,9 @@ $discoverDailyPercentage: 25%;
     }
 }
 
-@media only screen and (max-width: 1700px) {
-    .imageCol0, .imageCol1 {
+// 4x2
+@media only screen and (max-width: 1500px) and (min-height: 900px) {
+    .imageCol1 {
         display: none;
     }
 
@@ -121,31 +124,18 @@ $discoverDailyPercentage: 25%;
     }
 }
 
-@media only screen and (max-width: 1500px) {
-    .imageCol0, .imageCol1, .imageCol2 {
+//4x1
+@media only screen and (max-width: 1200px) and (min-height: 900px) {
+    .imageCol2 {
         display: none;
     }
 
     .discoverDailyLeftColumn {
         width: calc(100vw - 25vh);
-
-        text-align: center;
-
-        h1 {
-            font-size: 6vw;
-        }
-
-        h3 {
-            font-size: 3vw;
-        }
-
-        button {
-            font-size: 5vw;
-            float: inherit;
-        }
     }
 }
 
+// 3x3
 @media only screen and (max-height: 900px) {
     .imageRow3, .imageCol0 {
         display: none;
@@ -164,28 +154,47 @@ $discoverDailyPercentage: 25%;
             width: 33.33vh;
         }
     }
+}
 
-    @media only screen and (max-width: 2100px) {
-        .imageCol1 {
-            display: none;
-        }
-    
-        .discoverDailyLeftColumn {
-            width: calc(100vw - 66.66vh);
-        }
+//3x2
+@media only screen and (max-width: 1500px) and (min-height: 600px) and (max-height: 900px) {
+    .imageCol1 {
+        display: none;
     }
 
-    @media only screen and (max-width: 1500px) {
-        .imageCol2 {
-            display: none;
-        }
-    
-        .discoverDailyLeftColumn {
-            width: calc(100vw - 33.33vh);
+    .discoverDailyLeftColumn {
+        width: calc(100vw - 66.66vh);
+    }
+}
+
+
+// 3x1
+@media only screen and (max-width: 1200px) and (min-height: 600px) and (max-height: 900px) {
+    .imageCol2 {
+        display: none;
+    }
+
+    .discoverDailyLeftColumn {
+        width: calc(100vw - 33.33vh);
+    }
+}
+
+// 3x1 centered
+@media only screen and (max-width: 900px) and (min-height: 600px) and (max-height: 900px) {
+    .DiscoverDailyMain {
+        background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+    }
+
+    .discoverDailyLeftColumn {
+        text-align: center;
+
+        button {
+            float: inherit;
         }
     }
 }
 
+// 2x2
 @media only screen and (max-height: 600px) {
     .imageRow3, .imageRow2, .imageCol0, .imageCol1 {
         display: none;
@@ -204,24 +213,30 @@ $discoverDailyPercentage: 25%;
             width: 50vh;
         }
     }
+}
 
-    @media only screen and (max-width: 2100px) {
-        .imageCol2 {
-            display: none;
-        }
-    
-        .discoverDailyLeftColumn {
-            width: calc(100vw - 50vh);
-        }
+//2x1
+@media only screen and (max-width: 1500px) and (max-height: 600px) {
+    .imageCol2 {
+        display: none;
     }
 
-    @media only screen and (max-width: 1500px) {
-        .imageCol2, .imageCol3 {
-            display: none;
-        }
-    
-        .discoverDailyLeftColumn {
-            width: 100vw;
+    .discoverDailyLeftColumn {
+        width: calc(100vw - 50vh);
+    }
+}
+
+// 2x1 centered
+@media only screen and (max-width: 1000px) and (max-height: 600px) {
+    .DiscoverDailyMain {
+        background-image: linear-gradient(to top, $discoverDailyLight, $discoverDailyPercentage, $discoverDailyDark);
+    }
+
+    .discoverDailyLeftColumn {
+        text-align: center;
+
+        button {
+            float: inherit;
         }
     }
 }
