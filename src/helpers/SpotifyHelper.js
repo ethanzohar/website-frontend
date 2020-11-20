@@ -15,7 +15,7 @@ class SpotifyHelper {
   }
 
   static getOAuthCodeUrl(redirect_uri) {
-    let scope = 'ugc-image-upload user-top-read playlist-modify-private playlist-modify-public playlist-read-private';
+    let scope = 'user-top-read playlist-modify-private playlist-modify-public playlist-read-private';
 
     let url = 'https://accounts.spotify.com/authorize';
     url += '?response_type=code';
