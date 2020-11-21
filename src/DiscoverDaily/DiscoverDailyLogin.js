@@ -7,6 +7,8 @@ import { images } from './images';
 import './discoverDaily.scss';
 
 const DiscoverDailyLogin = () => {
+  document.title = "Discover Daily";
+  
   const sendLoginRedirect = () => {
       window.location = SpotifyHelper.getOAuthCodeUrl(window.location.origin + '/discover-daily/redirect');
   }

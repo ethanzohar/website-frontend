@@ -5,6 +5,7 @@ import { images } from './images';
 
 class DiscoverDailyRedirect extends Component {
   UNSAFE_componentWillMount() {
+    document.title = "Discover Daily";
     const paramQuery = new URLSearchParams(this.props.location.search);
 
     sessionStorage.setItem('discoverDaily_code', paramQuery.get('code'));

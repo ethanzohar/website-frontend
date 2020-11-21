@@ -7,7 +7,6 @@ import DiscoverDailyHelper from '../helpers/DiscoverDailyHelper';
 import { images } from './images';
 
 import './discoverDaily.scss';
-import { access } from 'fs';
 class DiscoverDaily extends Component {
   constructor(props) {
     super(props)
@@ -73,6 +72,7 @@ class DiscoverDaily extends Component {
   }
 
   async UNSAFE_componentWillMount() {
+    document.title = "Discover Daily";
     await this.getUserState();
   }
   
