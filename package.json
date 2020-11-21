@@ -14,7 +14,6 @@
     "node-sass": "^4.14.1",
     "querystring": "~0.2.0",
     "react": "^16.12.0",
-    "react-amazing-proxy": "^1.0.63",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.12.0",
     "react-pdf": "^5.0.0",
