@@ -28,8 +28,6 @@ class SpotifyHelper {
   }
 
   static async getRefreshToken(code, redirect_uri) {
-    console.log(code);
-    console.log(redirect_uri)
     let details = {
       grant_type: 'authorization_code',
       code: code,
@@ -37,6 +35,8 @@ class SpotifyHelper {
       client_id: CLIENT_ID,
       client_secret: CLIENT_SECRET
     }
+
+    console.log(details);
 
     let formBody = [];
     for (let property in details) {
