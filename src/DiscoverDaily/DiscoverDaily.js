@@ -7,6 +7,7 @@ import DiscoverDailyHelper from '../helpers/DiscoverDailyHelper';
 import { images } from './images';
 
 import './discoverDaily.scss';
+import { access } from 'fs';
 class DiscoverDaily extends Component {
   constructor(props) {
     super(props)
@@ -42,6 +43,9 @@ class DiscoverDaily extends Component {
     if (refreshToken) {
       this.setState({ refreshToken });
       const { accessToken } = await DiscoverDailyHelper.getAccessToken(refreshToken);
+
+      console.log('access token')
+      console.log(accessToken)
       
       if (accessToken) {
         const spotifyUser = await SpotifyHelper.getUserInfo(accessToken);
