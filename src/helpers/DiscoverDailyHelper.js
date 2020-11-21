@@ -1,3 +1,5 @@
+import SpotifyHelper from './SpotifyHelper';
+
 require('dotenv').config()
 class DiscoverDailyHelper {
   static async signupUser(userId, refreshToken) {
@@ -16,7 +18,7 @@ class DiscoverDailyHelper {
   }
 
   static async unsubscribeUser(userId, refreshToken) {
-    const { accessToken } = await this.getAccessToken(refreshToken); 
+    const { accessToken } = await SpotifyHelper.getAccessToken(refreshToken); 
 
     const response = await fetch('/api/discover-daily/unsubscribe', {
       method: 'POST',
@@ -44,7 +46,7 @@ class DiscoverDailyHelper {
   }
 
   static async getAlbums(refreshToken) {
-    const { accessToken } = await this.getAccessToken(refreshToken); 
+    const { accessToken } = await SpotifyHelper.getAccessToken(refreshToken); 
 
     let albums = [];
     let next = `https://api.spotify.com/v1/me/tracks?limit=50`;
@@ -68,23 +70,6 @@ class DiscoverDailyHelper {
 
     // const albums = j.items.map((x) => x.track.album.images[0].url);
     return [...new Set(albums)];
-  }
-
-  static async getAccessToken(refreshToken) {
-    const response = await fetch('/api/discover-daily/accessToken', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        refreshToken
-      })
-    });
-
-    console.log(response);
-
-    return response.json();
   }
 }
 

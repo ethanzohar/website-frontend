@@ -32,7 +32,7 @@ class DiscoverDaily extends Component {
   }
 
   sendToLogin() {
-    // window.location = window.location.origin + '/discover-daily/login';
+    window.location = window.location.origin + '/discover-daily/login';
   }
 
   async getUserState() {
@@ -90,6 +90,7 @@ class DiscoverDaily extends Component {
 
   async unsubscribeUser () {
     const { success } = await DiscoverDailyHelper.unsubscribeUser(this.state.spotifyUser.id, this.state.refreshToken);
+    console.log(success);
     if (success) {
       this.setState({ user: null });
     }
