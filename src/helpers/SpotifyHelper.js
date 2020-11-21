@@ -28,6 +28,8 @@ class SpotifyHelper {
   }
 
   static async getRefreshToken(code, redirect_uri) {
+    console.log(code);
+    console.log(redirect_uri)
     let details = {
       grant_type: 'authorization_code',
       code: code,
