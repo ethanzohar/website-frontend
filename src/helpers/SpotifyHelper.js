@@ -94,7 +94,7 @@ class SpotifyHelper {
         body: formBody
     });
 
-    return result.json();
+    return (await result.json()).access_token;
 }
 }
 export default SpotifyHelper;
