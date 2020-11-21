@@ -69,5 +69,32 @@ class SpotifyHelper {
 
     return response.json();
   }
+
+  static async getAccessToken(refreshToken) {
+    const details = {
+        'grant_type': 'refresh_token',
+        'refresh_token': refreshToken,
+        'client_id': CLIENT_ID,
+        'client_secret': CLIENT_SECRET
+    }
+
+    let formBody = [];
+    for (var property in details) {
+        var encodedKey = encodeURIComponent(property);
+        var encodedValue = encodeURIComponent(details[property]);
+        formBody.push(encodedKey + "=" + encodedValue);
+    }
+    formBody = formBody.join("&");
+
+    const result = await fetch(`https://accounts.spotify.com/api/token`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formBody
+    });
+
+    return result.json();
+}
 }
 export default SpotifyHelper;
