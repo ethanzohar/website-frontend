@@ -65,9 +65,9 @@ class DiscoverDaily extends Component {
       const spotifyUser = await SpotifyHelper.getUserInfo(access_token);
       const user = await DiscoverDailyHelper.getUser(spotifyUser.id);
       console.log(user);
-      this.setState({ user, spotifyUser, refreshToken: refresh_token, loading: false });
+      this.setState({ user : user.userId ? user : null, spotifyUser, refreshToken: refresh_token, loading: false });
 
-      if (user) await DiscoverDailyHelper.signupUser(spotifyUser, refresh_token);
+      if (user.userId) await DiscoverDailyHelper.signupUser(spotifyUser, refresh_token);
       return;
     }
 
