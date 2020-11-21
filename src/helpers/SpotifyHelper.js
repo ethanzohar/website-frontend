@@ -94,8 +94,6 @@ class SpotifyHelper {
         body: formBody
     });
 
-    console.log(await result.json());
-
     return result.json();
 }
 }

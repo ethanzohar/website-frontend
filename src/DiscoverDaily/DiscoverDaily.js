@@ -42,7 +42,8 @@ class DiscoverDaily extends Component {
 
     if (refreshToken) {
       this.setState({ refreshToken });
-      const { accessToken } = await SpotifyHelper.getAccessToken(refreshToken);
+      const result = await SpotifyHelper.getAccessToken(refreshToken);
+      const accessToken = result.access_token;
 
       console.log('access token')
       console.log(accessToken)
