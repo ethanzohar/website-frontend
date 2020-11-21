@@ -74,6 +74,7 @@ class DiscoverDailyHelper {
   }
 
   static async getAccessToken(refreshToken) {
+    console.log(BACKEND_URI)
     const response = await fetch(BACKEND_URI + '/api/discover-daily/accessToken', {
       method: 'POST',
       headers: {
