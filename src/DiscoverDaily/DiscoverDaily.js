@@ -28,7 +28,6 @@ class DiscoverDaily extends Component {
 
     this.signupUser = this.signupUser.bind(this);
     this.unsubscribeUser = this.unsubscribeUser.bind(this);
-    this.getCovers = this.getCovers.bind(this);
   }
 
   sendToLogin() {
@@ -88,21 +87,6 @@ class DiscoverDaily extends Component {
     }
   }
 
-  async getCovers() {
-    const albums = await DiscoverDailyHelper.getAlbums(this.state.refreshToken);
-    let string = "[";
-
-    for (let i of albums) {
-      string += "\"";
-      string += i;
-      string += "\",\n";
-    }
-
-    string += "]";
-
-    console.log(string);
-  }
-
   render() {
     let leftColumnRow;
     if (this.state.loading) {
@@ -135,7 +119,6 @@ class DiscoverDaily extends Component {
           <Col style={{width: '100%', margin: '0'}}>
             <Col className="discoverDailyLeftColumn">
               {leftColumnRow}
-              {/* <button className="btn btn-primary spotify-button" onClick={this.getCovers}>GET COVERS</button> */}
             </Col>
             <Col className='discoverDailyRightColumn'>
             {[0,4,8,12].map((x, index) => (
