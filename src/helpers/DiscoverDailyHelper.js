@@ -1,8 +1,10 @@
 require('dotenv').config()
 
+const BACKEND_URI = 'http://localhost:8081';
+
 class DiscoverDailyHelper {
   static async signupUser(userId, refreshToken) {
-    const response = await fetch('/api/discover-daily/subscribe', {
+    const response = await fetch(BACKEND_URI + '/api/discover-daily/subscribe', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -19,7 +21,7 @@ class DiscoverDailyHelper {
   static async unsubscribeUser(userId, refreshToken) {
     const { accessToken } = await this.getAccessToken(refreshToken); 
 
-    const response = await fetch('/api/discover-daily/unsubscribe', {
+    const response = await fetch(BACKEND_URI + '/api/discover-daily/unsubscribe', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -34,7 +36,7 @@ class DiscoverDailyHelper {
   }
 
   static async getUser(userId) {
-    const response = await fetch(`/api/discover-daily/getUser/${userId}`, {
+    const response = await fetch(`${BACKEND_URI}/api/discover-daily/getUser/${userId}`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -72,7 +74,8 @@ class DiscoverDailyHelper {
   }
 
   static async getAccessToken(refreshToken) {
-    const response = await fetch('/api/discover-daily/accessToken', {
+    console.log(BACKEND_URI)
+    const response = await fetch(BACKEND_URI + '/api/discover-daily/accessToken', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -81,8 +84,7 @@ class DiscoverDailyHelper {
       body: JSON.stringify({
         refreshToken
       })
-    });
-
+    })
     console.log(response);
 
     return response.json();
