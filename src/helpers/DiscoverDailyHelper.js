@@ -81,7 +81,9 @@ class DiscoverDailyHelper {
       body: JSON.stringify({
         refreshToken
       })
-    })
+    });
+
+    console.log(response);
 
     return response.json();
   }
