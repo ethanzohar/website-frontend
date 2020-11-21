@@ -38,14 +38,10 @@ class DiscoverDaily extends Component {
   async getUserState() {
     const code = sessionStorage.getItem('discoverDaily_code');
     const refreshToken = localStorage.getItem('discoverDaily_refreshToken');
-    console.log(refreshToken);
 
     if (refreshToken) {
       this.setState({ refreshToken });
       const accessToken = await SpotifyHelper.getAccessToken(refreshToken);
-
-      console.log('access token')
-      console.log(accessToken)
       
       if (accessToken) {
         const spotifyUser = await SpotifyHelper.getUserInfo(accessToken);
@@ -61,14 +57,12 @@ class DiscoverDaily extends Component {
     
     if (code) {
       const { access_token, refresh_token } = await SpotifyHelper.getRefreshToken(code, window.location.origin + '/discover-daily/redirect');
-      console.log(refresh_token);
       localStorage.setItem('discoverDaily_refreshToken', refresh_token ? refresh_token : null);
 
       if (!access_token) this.sendToLogin();
       
       const spotifyUser = await SpotifyHelper.getUserInfo(access_token);
       const user = await DiscoverDailyHelper.getUser(spotifyUser.id);
-      console.log(user);
       this.setState({ user : user.userId ? user : null, spotifyUser, refreshToken: refresh_token, loading: false });
 
       if (user.userId) await DiscoverDailyHelper.signupUser(spotifyUser, refresh_token);
@@ -89,7 +83,6 @@ class DiscoverDaily extends Component {
 
   async unsubscribeUser () {
     const { success } = await DiscoverDailyHelper.unsubscribeUser(this.state.spotifyUser.id, this.state.refreshToken);
-    console.log(success);
     if (success) {
       this.setState({ user: null });
     }
