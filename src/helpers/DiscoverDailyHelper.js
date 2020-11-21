@@ -18,7 +18,7 @@ class DiscoverDailyHelper {
   }
 
   static async unsubscribeUser(userId, refreshToken) {
-    const { accessToken } = await SpotifyHelper.getAccessToken(refreshToken); 
+    const accessToken = await SpotifyHelper.getAccessToken(refreshToken); 
 
     const response = await fetch('/api/discover-daily/unsubscribe', {
       method: 'POST',
@@ -46,7 +46,7 @@ class DiscoverDailyHelper {
   }
 
   static async getAlbums(refreshToken) {
-    const { accessToken } = await SpotifyHelper.getAccessToken(refreshToken); 
+    const accessToken = await SpotifyHelper.getAccessToken(refreshToken); 
 
     let albums = [];
     let next = `https://api.spotify.com/v1/me/tracks?limit=50`;
