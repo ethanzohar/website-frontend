@@ -12,7 +12,7 @@ import SpotifyLoginRedirect from "./viber/SpotifyLoginRedirect";
 import DiscoverDaily from "./DiscoverDaily/DiscoverDaily";
 import DiscoverDailyRedirect from "./DiscoverDaily/DiscoverDailyRedirect";
 import DiscoverDailyLogin from "./DiscoverDaily/DiscoverDailyLogin";
-import GA from 'utils/GoogleAnalytics'
+import GA from "./utils/GoogleAnalytics";
 import './fonts/Gotham.otf';
 
 function App() {
