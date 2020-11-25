@@ -150,9 +150,9 @@ class HomePage2 extends Component {
                   </div>
                 </a>
                 <div className="iconRow">
-                  <a href="https://github.com/ethanzohar" without rel="noopener noreferrer" target="_blank"><img src={github} /></a>
-                  <a href="https://linkedin.com/in/ethan-zohar" without rel="noopener noreferrer" target="_blank"><img src={linkedin} style={{ margin: '0 1%'}} /></a>
-                  <a href="https://www.instagram.com/ethan_zohar/" without rel="noopener noreferrer" target="_blank"><img src={instagram} /></a>
+                  <a href="https://github.com/ethanzohar" rel="noopener noreferrer" target="_blank"><img src={github} /></a>
+                  <a href="https://linkedin.com/in/ethan-zohar" rel="noopener noreferrer" target="_blank"><img src={linkedin} style={{ margin: '0 1%'}} /></a>
+                  <a href="https://www.instagram.com/ethan_zohar/" rel="noopener noreferrer" target="_blank"><img src={instagram} /></a>
                 </div>
               </Col>
             </Row>
@@ -198,12 +198,12 @@ class HomePage2 extends Component {
                   file={transcript}
                   onLoadSuccess={this.onDocumentLoadSuccess}
                 >
-                  <Page scale="1.17" pageNumber={this.state.pageNumber} />
+                  <Page scale={1.17} pageNumber={this.state.pageNumber} />
                   <div className="page-controls" style={{ height: 'max-content', top: '0', left: '95%', backgroundColor: 'transparent', boxShadow: 'none'}}>
-                    <a className="cancelATag" href={transcript} without rel="noopener noreferrer" target="_blank">
-                      <svg width="0.75em" height="0.75em" viewBox="0 0 16 16" class="bi bi-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                    <a className="cancelATag" href={transcript} rel="noopener noreferrer" target="_blank">
+                      <svg width="0.75em" height="0.75em" viewBox="0 0 16 16" className="bi bi-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                        <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                       </svg>
                     </a>
                   </div>
@@ -350,12 +350,12 @@ class HomePage2 extends Component {
               </Col>
               <Col style={{width: '40%', margin: '0', display: 'inline-block', float: 'right'}}>
               <Document file={resume}>
-                <Page scale="1.17" pageNumber={1} />
+                <Page scale={1.17} pageNumber={1} />
                   <div className="page-controls" style={{ height: 'max-content', top: '0', left: '95%', backgroundColor: 'transparent', boxShadow: 'none'}}>
-                    <a className="cancelATag" href={resume} without rel="noopener noreferrer" target="_blank">
-                      <svg width="0.75em" height="0.75em" viewBox="0 0 16 16" class="bi bi-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                    <a className="cancelATag" href={resume} rel="noopener noreferrer" target="_blank">
+                      <svg width="0.75em" height="0.75em" viewBox="0 0 16 16" className="bi bi-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                        <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                       </svg>
                     </a>
                   </div>
@@ -374,12 +374,12 @@ class HomePage2 extends Component {
                   </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Discover Daily</p></a></div>
+                    <div className="shadow"><a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Discover Daily</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/ethanzohar/discover-daily</a></p>
+                      <a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" rel="noopener noreferrer" target="_blank">github.com/ethanzohar/discover-daily</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
@@ -393,12 +393,12 @@ class HomePage2 extends Component {
                 </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://github.com/ethanzohar/Viber" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Viber</p></a></div>
+                    <div className="shadow"><a href="https://github.com/ethanzohar/Viber" className="cancelATag" rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Viber</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/ethanzohar/Viber" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/ethanzohar/Viber</a></p>
+                      <a href="https://github.com/ethanzohar/Viber" className="cancelATag" rel="noopener noreferrer" target="_blank">github.com/ethanzohar/Viber</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
@@ -416,12 +416,12 @@ class HomePage2 extends Component {
                 </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://whiteboards.tech" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Whiteboards.tech</p></a></div>
+                    <div className="shadow"><a href="https://whiteboards.tech" className="cancelATag" rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Whiteboards.tech</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/TOHacks-Dev/whiteboard" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/TOHacks-Dev/whiteboard</a></p>
+                      <a href="https://github.com/TOHacks-Dev/whiteboard" className="cancelATag" rel="noopener noreferrer" target="_blank">github.com/TOHacks-Dev/whiteboard</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
@@ -438,12 +438,12 @@ class HomePage2 extends Component {
                 </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://screenshare.pro" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Screenshare.pro</p></a></div>
+                    <div className="shadow"><a href="https://screenshare.pro" className="cancelATag" rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Screenshare.pro</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/Computer-Kids-Club/screenshare-web" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/Computer-Kids-Club/screenshare-web</a></p>
+                      <a href="https://github.com/Computer-Kids-Club/screenshare-web" className="cancelATag" rel="noopener noreferrer" target="_blank">github.com/Computer-Kids-Club/screenshare-web</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
@@ -461,12 +461,12 @@ class HomePage2 extends Component {
                 </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" without rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Pokémon Online Battle Simulator</p></a></div>
+                    <div className="shadow"><a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Pokémon Online Battle Simulator</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" without rel="noopener noreferrer" target="_blank">github.com/Computer-Kids-Club/pokeman</a></p>
+                      <a href="https://github.com/Computer-Kids-Club/pokeman" className="cancelATag" rel="noopener noreferrer" target="_blank">github.com/Computer-Kids-Club/pokeman</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">

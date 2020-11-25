@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     if (process.env.NODE_ENV === 'production') {
-      ReactGa.initialize(process.env.GOOGLE_ANALYTICS_ID);
+      ReactGa.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
       ReactGa.pageview(window.location.pathname + window.location.search);
     }
   }, [])
