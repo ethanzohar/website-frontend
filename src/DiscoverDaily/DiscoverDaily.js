@@ -38,7 +38,7 @@ class DiscoverDaily extends Component {
     const code = sessionStorage.getItem('discoverDaily_code');
     const refreshToken = localStorage.getItem('discoverDaily_refreshToken');
 
-    if (refreshToken) {
+    if (refreshToken && refreshToken !== "null") {
       this.setState({ refreshToken });
       const accessToken = await SpotifyHelper.getAccessToken(refreshToken);
       
