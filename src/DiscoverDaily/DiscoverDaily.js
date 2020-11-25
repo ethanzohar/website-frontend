@@ -31,14 +31,14 @@ class DiscoverDaily extends Component {
   }
 
   sendToLogin() {
-    // window.location = window.location.origin + '/discover-daily/login';
+    window.location = window.location.origin + '/discover-daily/login';
   }
 
   async getUserState() {
     const code = sessionStorage.getItem('discoverDaily_code');
     const refreshToken = localStorage.getItem('discoverDaily_refreshToken');
 
-    if (refreshToken && refreshToken !== "null") {
+    if (refreshToken && refreshToken !== 'null') {
       this.setState({ refreshToken });
       const accessToken = await SpotifyHelper.getAccessToken(refreshToken);
       
@@ -54,7 +54,7 @@ class DiscoverDaily extends Component {
       }
     }
     
-    if (code) {
+    if (code && code !== 'null') {
       const { access_token, refresh_token } = await SpotifyHelper.getRefreshToken(code, window.location.origin + '/discover-daily/redirect');
       localStorage.setItem('discoverDaily_refreshToken', refresh_token ? refresh_token : null);
 

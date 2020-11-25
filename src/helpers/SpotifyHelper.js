@@ -36,8 +36,6 @@ class SpotifyHelper {
       client_secret: CLIENT_SECRET
     }
 
-    console.log(details);
-
     let formBody = [];
     for (let property in details) {
       let encodedKey = encodeURIComponent(property);
