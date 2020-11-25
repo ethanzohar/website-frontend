@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "git pull && pm2 delete website-frontend && npm run-script build && pm2 serve build 8080 --name website-frontend --spa"
+    "deploy": "git pull && npm run-script build && pm2 delete website-frontend && pm2 serve build 8080 --name website-frontend --spa"
   },
   "eslintConfig": {
     "extends": "react-app"
