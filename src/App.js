@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, BrowserRouter } from "react-router-dom";
 import HomePage from "./HomePage";
 import HomePage2 from "./HomePage2";
@@ -12,15 +12,21 @@ import SpotifyLoginRedirect from "./viber/SpotifyLoginRedirect";
 import DiscoverDaily from "./DiscoverDaily/DiscoverDaily";
 import DiscoverDailyRedirect from "./DiscoverDaily/DiscoverDailyRedirect";
 import DiscoverDailyLogin from "./DiscoverDaily/DiscoverDailyLogin";
-import GA from "./utils/GoogleAnalytics";
+import ReactGa from 'react-ga';
 import './fonts/Gotham.otf';
 
 function App() {
   document.title = "Ethan Zohar"
 
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      ReactGa.initialize(process.env.GOOGLE_ANALYTICS_ID);
+      ReactGa.pageview(window.location.pathname + window.location.search);
+    }
+  }, [])
+
   return (
     <BrowserRouter>
-      { GA.init() && <GA.RouteTracker /> }
       <Route exact path="/old" component={HomePage}></Route>
       <Route exact path="/" component={HomePage2}></Route>
       <Route exact path="/endpoints" component={Endpoints}></Route>
