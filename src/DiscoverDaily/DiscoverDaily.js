@@ -16,7 +16,8 @@ class DiscoverDaily extends Component {
       spotifyUser: null,
       refreshToken: null,
       loading: true,
-      imageIndexes: new Set()
+      imageIndexes: new Set(),
+      submitting: false
     }
 
     while (this.state.imageIndexes.size < 16) {
@@ -77,15 +78,19 @@ class DiscoverDaily extends Component {
   }
   
   async signupUser () {
+    this.setState({submitting: true});
     const { user } = await DiscoverDailyHelper.signupUser(this.state.spotifyUser.id, this.state.refreshToken);
-    this.setState({ user });
+    this.setState({ user, submitting: false });
   }
 
   async unsubscribeUser () {
+    this.setState({submitting: true});
     const { success } = await DiscoverDailyHelper.unsubscribeUser(this.state.spotifyUser.id, this.state.refreshToken);
     if (success) {
       this.setState({ user: null });
     }
+
+    this.setState({submitting: false});
   }
 
   render() {
@@ -93,7 +98,7 @@ class DiscoverDaily extends Component {
     if (this.state.loading) {
       leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%' }}>
                         <div style={{ width: 'max-content', margin: '0 auto' }}>
-                          <CircularProgress style={{width: '10vw', height: '10vw'}}/>
+                          <CircularProgress style={{width: '10vw', height: '10vw', color: 'rgb(12, 38, 88)'}}/>
                         </div>
                       </Row>;
     } else if (this.state.user) {
@@ -102,14 +107,22 @@ class DiscoverDaily extends Component {
                         <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
                         <h3>Your next curated playlist is on its way and will be ready tomorrow morning!</h3>
                         <h3>If you don't want to get a daily playlist anymore you can click the button below to unsubscribe.</h3>
-                        <button className="btn btn-primary spotify-button" onClick={this.unsubscribeUser}>Unsubscribe</button>
+                        <button className="btn btn-primary spotify-button" onClick={this.unsubscribeUser} disabled={this.state.submitting} style={{ marginBottom: '2%' }}>Unsubscribe</button>
+                        {this.state.submitting ? (
+                          <CircularProgress style={{marginLeft: '2%', width: '4%', height: '4%', color: 'rgb(12, 38, 88)'}}/>
+                          ) :
+                          null}
                       </Row>;
     } else {
       leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%' }}>
                         <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
                         <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
                         <h3 >Click the button below to get a daily playlist with 30 songs that we've curated for you based on your listening history.</h3>
-                        <button className="btn btn-primary spotify-button" onClick={this.signupUser}>Get your daily playlist</button>
+                        <button className="btn btn-primary spotify-button" onClick={this.signupUser} disabled={this.state.submitting}  style={{ marginBottom: '2%' }}>Get your daily playlist</button>
+                        {this.state.submitting ? (
+                          <CircularProgress style={{marginLeft: '2%', width: '4%', height: '4%', color: 'rgb(12, 38, 88)'}}/>
+                          ) :
+                          null}
                       </Row>;
     }
     const imageIndexes = [...this.state.imageIndexes];

@@ -23,7 +23,7 @@ const DiscoverDailyLogin = () => {
               <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
               <h3>Finding new songs that you love is hard, so let us take care of that for you!</h3>
               <h3>Link your Spotify account by logging in below to get access to daily music playlists curated to you.</h3>
-              <button className="btn btn-primary spotify-button" onClick={sendLoginRedirect}>Get your daily playlist</button>
+              <button className="btn btn-primary spotify-button" onClick={sendLoginRedirect}>Login with Spotify</button>
             </Row>
           </Col>
           <Col className='discoverDailyRightColumn'>
