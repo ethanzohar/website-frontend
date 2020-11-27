@@ -35,6 +35,26 @@ class DiscoverDaily extends Component {
     window.location = window.location.origin + '/discover-daily/login';
   }
 
+  updateTime() {
+    let timeRange = 'second';
+
+    const now = new Date(this.state.user.now);
+    const lastUpdated = new Date(this.state.user.lastUpdated);
+    let timeDif = (now.getTime() - lastUpdated.getTime()) / 1000;
+
+    if (timeDif >= 60) {
+      timeDif /= 60;
+      timeRange = 'minute';
+    }
+
+    if (timeDif >= 60) {
+      timeDif /= 24;
+      timeRange = 'hour';
+    }
+
+    this.setState({ lastUpdated: Math.round(timeDif), timeRange })
+  }
+
   async getUserState() {
     const code = sessionStorage.getItem('discoverDaily_code');
     const refreshToken = localStorage.getItem('discoverDaily_refreshToken');
@@ -75,12 +95,14 @@ class DiscoverDaily extends Component {
   async UNSAFE_componentWillMount() {
     document.title = "Discover Daily";
     await this.getUserState();
+    this.updateTime();
   }
   
   async signupUser () {
     this.setState({submitting: true});
-    const { user } = await DiscoverDailyHelper.signupUser(this.state.spotifyUser.id, this.state.refreshToken);
+    const user = await DiscoverDailyHelper.signupUser(this.state.spotifyUser.id, this.state.refreshToken);
     this.setState({ user, submitting: false });
+    this.updateTime();
   }
 
   async unsubscribeUser () {
@@ -105,7 +127,8 @@ class DiscoverDaily extends Component {
       leftColumnRow = <Row style={{ width: '90%', marginLeft: '4%' }}>
                         <h1 style={{ margin: '0' }}>Discover Weekly...</h1>
                         <h1 style={{ margin: '0 0 3% 0' }}>But Daily</h1>
-                        <h3>Your next curated playlist is on its way and will be ready tomorrow morning!</h3>
+                        <h3>{`Your playlist was updated ${this.state.lastUpdated} ${this.state.timeRange}${this.state.lastUpdated > 1 ? 's' : ''} ago`}</h3>
+                        <h3>A new playlist is on its way and will be ready for you tomorrow morning!</h3>
                         <h3>If you don't want to get a daily playlist anymore you can click the button below to unsubscribe.</h3>
                         <button className="btn btn-primary spotify-button" onClick={this.unsubscribeUser} disabled={this.state.submitting} style={{ marginBottom: '2%' }}>Unsubscribe</button>
                         {this.state.submitting ? (
@@ -136,7 +159,7 @@ class DiscoverDaily extends Component {
             </Col>
             <Col className='discoverDailyRightColumn'>
             {[0,4,8,12].map((x, index) => (
-              <Row className={`imageRow imageRow${index}`}>
+              <Row key={index} className={`imageRow imageRow${index}`}>
                 <Col className={`imageCol imageCol${0}`}>
                   <img src={images[imageIndexes[x]]} alt="albumImage"></img>
                 </Col>
