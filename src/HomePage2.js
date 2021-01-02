@@ -6,6 +6,8 @@ import headerImage2 from './images/headerImage2.jpg';
 import headerImage3 from './images/headerImage3.jpg';
 import linkedin from './images/linkedin.png';
 import instagram from './images/instagram.webp';
+import discoverifyMain from './images/discoverifyMain.png';
+import discoverifySettings from './images/discoverifySettings.png';
 import screenshareStream from './images/screenshareStream.png';
 import screenshareWatch from './images/screenshareWatch.png';
 import viberListen from './images/viberListenView.png';
@@ -374,18 +376,28 @@ class HomePage2 extends Component {
                   </Row>
                 <Row style={{width: '100%', margin: '1% 0 0 0'}}>
                   <Row className="centeredRow">
-                    <div className="shadow"><a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Discover Daily</p></a></div>
+                    <div className="shadow"><a href="https://www.discoverifymusic.com" className="cancelATag" rel="noopener noreferrer" target="_blank"><p style={{ fontSize: '3vw' }}>Discoverify</p></a></div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
                       <p style={{ fontSize: '2vw' }} className="smallShadow">
-                      <a href="https://github.com/ethanzohar/discover-daily" className="cancelATag" rel="noopener noreferrer" target="_blank">github.com/ethanzohar/discover-daily</a></p>
+                      <a href="https://www.discoverifymusic.com" className="cancelATag" rel="noopener noreferrer" target="_blank">discoverifymusic.com</a></p>
                     </div>
                   </Row>
                   <Row className="centeredRow">
                     <div className="shadow" >
-                      <p style={{ fontSize: '2vw' }} className="smallShadow">October 2020</p>
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">
+                      <a href="https://github.com/ethanzohar/discoverify" className="cancelATag" rel="noopener noreferrer" target="_blank">github.com/ethanzohar/discoverify</a></p>
                     </div>
+                  </Row>
+                  <Row className="centeredRow">
+                    <div className="shadow" >
+                      <p style={{ fontSize: '2vw' }} className="smallShadow">October 2020 - Present</p>
+                    </div>
+                  </Row>
+                  <Row style={{width: '100%', margin: '1% 0'}}>
+                    <img src={discoverifyMain} style={{ marginRight: '0.5%', marginLeft: '1%' }} alt="Discoverify Main Page" width='48.5%' />
+                    <img src={discoverifySettings} style={{ marginRight: '1%', marginLeft: '0.5%' }} alt="Discoverify Settings Page" width='48.5%' />
                   </Row>
                   <Row style={{ width: '90%', margin: '1% auto 0 auto', textAlign: 'center' }}>
                     <p style={{ fontSize: '1vw'}}>{PLAYLIST_TEXT}</p>
