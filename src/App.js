@@ -33,6 +33,12 @@ function App() {
       <Route exact path="/spotify/listen" component={Listen}></Route>
       <Route exact path="/spotify/stream" component={Stream}></Route>
       <Route exact path="/error" component={Error}></Route>
+      <Route path='/whiteboards'
+        component={() => { 
+            window.location.href = 'https://whiteboard-bf561.web.app/'; 
+            return null;
+        }}
+      />
     </BrowserRouter>
   );
 }
